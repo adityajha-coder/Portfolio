@@ -20,4 +20,9 @@ export function renderProjects(projects) {
         `;
         projectGrid.innerHTML += card;
     });
+
+    // convert any lucide icons that were injected with project cards
+    if (window.lucide && typeof lucide.replace === 'function') {
+        lucide.replace();
+    }
 }
