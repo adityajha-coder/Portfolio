@@ -9,29 +9,20 @@ export function renderContact(data) {
     if (socialContainer) {
         // ensure we have an array with at least one entry
         if (Array.isArray(data.socials) && data.socials.length) {
-                socialContainer.innerHTML = data.socials.map(s => {
-                    // If the icon string looks like a devicon class, render as <i class="...">,
-                    // otherwise assume it's a lucide icon name and use data-lucide attribute.
-                    const isDevicon = String(s.icon || '').includes('devicon');
-                    if (isDevicon) {
-                        return `
-                            <a href="${s.url}" target="_blank" class="hover:text-white transition-colors">
-                                <i class="${s.icon}" style="font-size:22px"></i>
-                            </a>
-                        `;
-                    } else {
-                        return `
-                            <a href="${s.url}" target="_blank" class="hover:text-white transition-colors">
-                                <i data-lucide="${s.icon}" width="24"></i>
-                            </a>
-                        `;
-                    }
-                }).join('');
+            socialContainer.innerHTML = data.socials.map(s => {
+                const iconName = s.icon || '';
+                return `
+                    <a href="${s.url}" target="_blank" rel="noopener noreferrer" aria-label="${s.name}"
+                       class="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 text-gray-200 hover:bg-pink-500 hover:text-white transition-colors">
+                        <i data-lucide="${iconName}" width="20"></i>
+                    </a>
+                `;
+            }).join('');
 
-                // Initialize Lucide to replace any <i data-lucide="..."> placeholders
-                if (window.lucide && typeof window.lucide.createIcons === 'function') {
-                    try { window.lucide.createIcons(); } catch (e) { /* ignore */ }
-                }
+            // Initialize Lucide to replace any <i data-lucide="..."> placeholders
+            if (window.lucide && typeof window.lucide.createIcons === 'function') {
+                try { window.lucide.createIcons(); } catch (e) { /* ignore */ }
+            }
         } else {
             socialContainer.innerHTML = '<p class="text-sm text-gray-500">No social links available.</p>';
         }

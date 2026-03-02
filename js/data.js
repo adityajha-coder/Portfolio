@@ -88,8 +88,8 @@ export const portfolioData = {
     ],
 
     socials: [
-        { name: "GitHub", url: "https://github.com/adityajha-coder", icon: "devicon-github-original colored" },
-        { name: "LinkedIn", url: "https://www.linkedin.com/in/aditya-jha-8534a1305/", icon: "devicon-linkedin-plain colored" },
+        { name: "GitHub", url: "https://github.com/adityajha-coder", icon: "github" },
+        { name: "LinkedIn", url: "https://www.linkedin.com/in/aditya-jha-8534a1305/", icon: "linkedin" },
         { name: "Instagram", url: "https://instagram.com/adjzyy", icon: "instagram" }
     ]
 };
