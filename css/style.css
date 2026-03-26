@@ -34,6 +34,7 @@ body {
 .text-gradient {
     background: linear-gradient(to right, #4f46e5, #06b6d4, #d946ef);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 200% auto;
     animation: gradientMove 5s ease infinite;
@@ -100,3 +101,4 @@ body {
     transform: translateY(-5px);
     color: #d946ef;
 }
+

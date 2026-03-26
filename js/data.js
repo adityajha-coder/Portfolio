@@ -78,13 +78,6 @@ export const portfolioData = {
             link: "https://pulse-kappa-two.vercel.app/#",
             image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2620&auto=format&fit=crop"
         },
-        {
-            title: "Quiz Master",
-            category: "Educational Web App",
-            description: "An interactive quiz application designed to help users expand their knowledge. Features multiple distinct categories, engaging gameplay, and dynamic score tracking.",
-            link: "https://quizx-master.vercel.app/",
-            image: "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=2670&auto=format&fit=crop"
-        }
     ],
 
     socials: [
