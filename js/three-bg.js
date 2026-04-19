@@ -6,20 +6,20 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 
 renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); 
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 renderer.toneMapping = THREE.ReinhardToneMapping;
 renderer.toneMappingExposure = 1.5;
 canvasContainer.appendChild(renderer.domElement);
 
-const knotGeometry = new THREE.TorusKnotGeometry(0.8, 0.25, 128, 32); 
-const knotMaterial = new THREE.MeshStandardMaterial({ 
-    color: 0x111111, roughness: 0.1, metalness: 0.8 
+const knotGeometry = new THREE.TorusKnotGeometry(0.8, 0.25, 128, 32);
+const knotMaterial = new THREE.MeshStandardMaterial({
+    color: 0x111111, roughness: 0.1, metalness: 0.8
 });
 const mainMesh = new THREE.Mesh(knotGeometry, knotMaterial);
 scene.add(mainMesh);
 
 const wireframeGeo = new THREE.WireframeGeometry(knotGeometry);
-const wireframeMat = new THREE.LineBasicMaterial({ color: 0x4f46e5, transparent: true, opacity: 0.15 }); 
+const wireframeMat = new THREE.LineBasicMaterial({ color: 0x4f46e5, transparent: true, opacity: 0.15 });
 const wireframe = new THREE.LineSegments(wireframeGeo, wireframeMat);
 mainMesh.add(wireframe);
 
@@ -39,14 +39,14 @@ scene.add(gridHelper);
 
 const planes = [];
 const planeGeo = new THREE.PlaneGeometry(0.5, 0.5);
-for(let i=0; i<20; i++) {
-    const mat = new THREE.MeshBasicMaterial({ 
-        color: Math.random() > 0.5 ? 0x4f46e5 : 0xd946ef, 
+for (let i = 0; i < 20; i++) {
+    const mat = new THREE.MeshBasicMaterial({
+        color: Math.random() > 0.5 ? 0x4f46e5 : 0xd946ef,
         side: THREE.DoubleSide, transparent: true, opacity: 0.4, wireframe: true
     });
     const mesh = new THREE.Mesh(planeGeo, mat);
     mesh.position.set((Math.random() - 0.5) * 15, (Math.random() - 0.5) * 15, (Math.random() - 0.5) * 5 - 2);
-    mesh.rotation.set(Math.random()*Math.PI, Math.random()*Math.PI, 0);
+    mesh.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, 0);
     scene.add(mesh);
     planes.push({ mesh, speed: Math.random() * 0.02 + 0.005 });
 }
@@ -54,7 +54,7 @@ for(let i=0; i<20; i++) {
 const particlesGeometry = new THREE.BufferGeometry();
 const particlesCount = 3000;
 const posArray = new Float32Array(particlesCount * 3);
-for(let i = 0; i < particlesCount * 3; i++) posArray[i] = (Math.random() - 0.5) * 60; 
+for (let i = 0; i < particlesCount * 3; i++) posArray[i] = (Math.random() - 0.5) * 60;
 particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
 const particlesMaterial = new THREE.PointsMaterial({ size: 0.03, color: 0xffffff, transparent: true, opacity: 0.6 });
 const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
@@ -104,7 +104,7 @@ const tick = () => {
 
     cursorLight.position.x += (targetX * 8 - cursorLight.position.x) * 0.1;
     cursorLight.position.y += (-targetY * 8 - cursorLight.position.y) * 0.1;
-    cursorLight.position.z = 3; 
+    cursorLight.position.z = 3;
 
     mainMesh.rotation.y = elapsedTime * 0.3;
     mainMesh.rotation.x = elapsedTime * 0.15 + (scrollY * 0.001);
@@ -122,7 +122,7 @@ const tick = () => {
         p.mesh.position.y += Math.sin(elapsedTime * p.speed) * 0.01;
     });
 
-    camera.position.y = -scrollY * 0.0025; 
+    camera.position.y = -scrollY * 0.0025;
     gridHelper.position.z = (elapsedTime * 2) % 10;
     gridHelper.position.y = -6 + (-scrollY * 0.0025);
 

@@ -3,31 +3,31 @@ export const portfolioData = {
     role: "Full Stack Developer",
     heroHeadline: ["Building", "Full Stack", "Solutions"],
     shortBio: "I specialize in full-stack web development and leveraging AI tools to build efficient, modern applications.",
-    email: "personal.adityajha@gmail.com",
+    email: "adityajha97172@gmail.com",
     
     longBio: [
         "I am a passionate Full Stack Developer with expertise in both frontend and backend technologies. My journey involves architecting scalable systems using the MERN stack and integrating AI-driven tools to enhance user experiences.",
-        "I am comfortable working with traditional languages like C++ and Java, while constantly exploring the bleeding edge of web frameworks like FastAPI and Next.js."
+        "I am comfortable working with traditional languages like C++ and Java, while constantly exploring the bleeding edge of web frameworks like REST APIs and Next.js."
     ],
     
     skills: {
         languages: [
             { name: "C", icon: "devicon-c-plain colored" },
             { name: "C++", icon: "devicon-cplusplus-plain colored" },
-            { name: "Java", icon: "devicon-java-plain colored" },
             { name: "JavaScript", icon: "devicon-javascript-plain colored" },
             { name: "HTML5", icon: "devicon-html5-plain colored" },
             { name: "CSS3", icon: "devicon-css3-plain colored" }
         ],
         frontend: [
             { name: "React", icon: "devicon-react-original colored" },
+            { name: "Next.js", icon: "devicon-nextjs-plain" },
             { name: "Tailwind CSS", icon: "devicon-tailwindcss-original colored" },
             { name: "Three.js", icon: "devicon-threejs-original" }
         ],
         backend: [
             { name: "Node.js", icon: "devicon-nodejs-plain colored" },
             { name: "Express", icon: "devicon-express-original" },
-            { name: "FastAPI", icon: "devicon-fastapi-plain colored" }
+            { name: "REST API", icon: "devicon-swagger-plain colored" }
         ],
         database: [
             { name: "MongoDB", icon: "devicon-mongodb-plain colored" },
@@ -58,25 +58,32 @@ export const portfolioData = {
 
     projects: [
         {
-            title: "Taskly",
-            category: "Productivity Web App",
-            description: "A comprehensive task management solution designed to streamline workflow organization. Features a user-friendly interface for adding, tracking, and completing tasks efficiently.",
-            link: "https://taskly-plum-one.vercel.app/",
-            image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=2672&auto=format&fit=crop"
+            title: "Vertex",
+            category: "Developer Toolkit",
+            description: "An all-in-one developer toolkit engineered to eliminate repetitive workflows and save up to 60–70% of development time. Built for speed, efficiency, and a seamless developer experience.",
+            link: "https://vertex-devkit.vercel.app",
+            image: "/images/vertex.jpg"
+        },
+        {
+            title: "PokeDex",
+            category: "Interactive Web App",
+            description: "A Next.js 16 powered Pokémon toolkit with real-time evolution lookups, type matchup tables, and a Squad Analyzer for competitive team building — all wrapped in a glassmorphic UI built to perform.",
+            link: "https://pokedex-project-db.vercel.app",
+            image: "/images/pokeball.png"
         },
         {
             title: "Attendora",
             category: "EdTech Solution",
             description: "An attendance management system for students. Currently under development, this tool aims to digitize attendance tracking for educational purpose.",
             link: "https://attendora-sat.vercel.app/",
-            image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2732&auto=format&fit=crop"
+            image: "/images/attendora.jpg"
         },
         {
             title: "PULSE",
             category: "HealthTech & Wellness Platform",
             description: "Personal Unified Lifestyle and Smart Empowerment. A comprehensive platform designed to empower users through smart tracking and ai suggestions, unified personal goals, and productivity and Health management.",
             link: "https://pulse-kappa-two.vercel.app/#",
-            image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2620&auto=format&fit=crop"
+            image: "/images/pulse.png"
         },
     ],
 

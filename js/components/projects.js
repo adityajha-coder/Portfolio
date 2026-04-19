@@ -4,7 +4,7 @@ export function renderProjects(projects) {
 
     projects.forEach(project => {
         const card = `
-            <div class="group">
+            <div class="group hover:-translate-y-2 transition-all duration-500 ease-out">
                 <div class="glass-panel rounded-2xl overflow-hidden aspect-video relative mb-4 border border-white/10 group-hover:border-pink-500/50 transition-colors duration-500 shadow-2xl">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent z-10 opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                         <h4 class="text-xl font-bold text-white mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">${project.title}</h4>
@@ -13,7 +13,7 @@ export function renderProjects(projects) {
                             Visit Project <i data-lucide="external-link" width="14"></i>
                         </a>
                     </div>
-                    <div class="w-full h-full bg-gray-800 project-image transition-transform duration-700 bg-cover bg-center group-hover:scale-110 group-hover:rotate-1" style="background-image: url('${project.image}')"></div>
+                    <div class="w-full h-full bg-gray-800 project-image transition-transform duration-700 bg-cover bg-center group-hover:scale-105" style="background-image: url('${project.image}')"></div>
                 </div>
                 <p class="text-gray-400 text-xs leading-relaxed border-l-2 border-pink-500/50 pl-3">${project.description}</p>
             </div>
