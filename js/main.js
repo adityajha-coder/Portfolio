@@ -8,6 +8,7 @@ import { renderSkills } from './components/skills.js';
 import { renderSoftSkills } from './components/softSkills.js';
 import { renderContact } from './components/contact.js';
 import { renderFooter } from './components/footer.js';
+import { renderEducation } from './components/education.js';
 
 function init() {
     renderNav(portfolioData);
@@ -18,7 +19,13 @@ function init() {
     renderSkills(portfolioData.skills);
     renderSoftSkills(portfolioData.softSkills);
     renderContact(portfolioData);
+    renderEducation(portfolioData.education);
     renderFooter(portfolioData);
+    
+    // Initialize Lucide icons
+    if (window.lucide) {
+        window.lucide.createIcons();
+    }
 }
 
 document.addEventListener('DOMContentLoaded', init);

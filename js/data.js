@@ -2,14 +2,14 @@ export const portfolioData = {
     name: "Aditya Jha",
     role: "Full Stack Developer",
     heroHeadline: ["Building", "Full Stack", "Solutions"],
-    shortBio: "I specialize in full-stack web development and leveraging AI tools to build efficient, modern applications.",
+    shortBio: "Engineering the digital frontlines. I build high-performance, full-stack web applications with a focus on seamless design and robust AI integrations.",
     email: "adityajha97172@gmail.com",
-    
+
     longBio: [
-        "I am a passionate Full Stack Developer with expertise in both frontend and backend technologies. My journey involves architecting scalable systems using the MERN stack and integrating AI-driven tools to enhance user experiences.",
-        "I am comfortable working with traditional languages like C++ and Java, while constantly exploring the bleeding edge of web frameworks like REST APIs and Next.js."
+        "I craft digital experiences where exceptional design meets raw performance. As a Full Stack Developer, I specialize in architecting responsive, scalable web platforms that don't just look stunning, but operate flawlessly under the hood. My core engineering philosophy is simple: build intuitive tools that solve real problems.",
+        "My technical foundation spans from low-level algorithms in C/C++ to the modern, lightning-fast ecosystems of Next.js, React, and Three.js. By bridging dynamic UI/UX design with scalable serverless backends and emerging AI technologies, I engineer applications built for the future of the web."
     ],
-    
+
     skills: {
         languages: [
             { name: "C", icon: "devicon-c-plain colored" },
@@ -60,31 +60,44 @@ export const portfolioData = {
         {
             title: "Vertex",
             category: "Developer Toolkit",
-            description: "An all-in-one developer toolkit engineered to eliminate repetitive workflows and save up to 60–70% of development time. Built for speed, efficiency, and a seamless developer experience.",
+            description: "A browser based developer workspace that consolidates the tools most developers keep scattered across tabs into one environment. It includes an AI assistant for architecture scaffolding and code generation, a full code editor with cloud synced snippets, a 3D visualizer that maps out any public GitHub repository, and a package analyzer for evaluating NPM dependencies. The whole thing is installable, works offline, and syncs your history across devices so nothing gets lost between sessions. Designed to save developers up to 60% of their routine workflow time.",
+            tech: ["Vanilla JS", "Firebase", "Monaco", "Three.js", "Node.js", "PWA"],
             link: "https://vertex-devkit.vercel.app",
             image: "/images/vertex.jpg"
         },
         {
             title: "PokeDex",
             category: "Interactive Web App",
-            description: "A Next.js 16 powered Pokémon toolkit with real-time evolution lookups, type matchup tables, and a Squad Analyzer for competitive team building — all wrapped in a glassmorphic UI built to perform.",
+            description: "A comprehensive Pokémon encyclopedia covering over 1025 species across all 9 generations. Features include a Squad Analyzer that calculates Level 100 stats and evaluates team synergy, visual evolution chain tracking with precise requirements such as levels, items, and friendship, and a type matchup calculator for competitive play. The entire experience is delivered through a compact glassmorphic interface built on the App Router and Server Components architecture.",
+            tech: ["Next.js 16", "React 19", "Tailwind CSS", "Radix UI", "PokeAPI"],
             link: "https://pokedex-project-db.vercel.app",
             image: "/images/pokeball.png"
         },
         {
             title: "Attendora",
             category: "EdTech Solution",
-            description: "An attendance management system for students. Currently under development, this tool aims to digitize attendance tracking for educational purpose.",
+            description: "A smart attendance tracking platform built for students. It includes an AI timetable scanner that can parse a photo of your schedule and automatically configure weekly classes using Llama 3.2 Vision. Other core features include predictive attendance goals, a bunk planner that calculates safe skip margins, an integrated GPA calculator, gamified achievements to keep users engaged, and full CSV report exports. All data stays synced across devices through Firebase.",
+            tech: ["Vanilla JS", "Firebase", "OpenRouter AI", "PWA", "Chart.js"],
             link: "https://attendora-sat.vercel.app/",
-            image: "/images/attendora.jpg"
+            image: "/images/attendora.webp"
         },
         {
             title: "PULSE",
-            category: "HealthTech & Wellness Platform",
-            description: "Personal Unified Lifestyle and Smart Empowerment. A comprehensive platform designed to empower users through smart tracking and ai suggestions, unified personal goals, and productivity and Health management.",
+            category: "HealthTech & Wellness",
+            description: "A unified health dashboard that consolidates activity, sleep, stress, and nutrition tracking into a single interface. It integrates a Gemini AI chatbot that supports both text and voice queries for health guidance. Additional tools include a BMI calculator, a symptom checker, a PDF report generator, and custom workout and nutrition planners. The platform also features a simulated telemedicine interface for booking consultations, and runs as an installable PWA with full offline support.",
+            tech: ["Vanilla JS", "Tailwind CSS", "Chart.js", "Gemini AI", "jsPDF", "PWA"],
             link: "https://pulse-kappa-two.vercel.app/#",
             image: "/images/pulse.png"
         },
+    ],
+
+    education: [
+        {
+            institution: "Bhagwan Parshuram Institute of Technology (BPIT)",
+            affiliation: "Affiliated To GGSIPU",
+            degree: "B.Tech Computer Science Engineering (Data Science)",
+            year: "2024-2028"
+        }
     ],
 
     socials: [

@@ -18,16 +18,57 @@
         <div class="text-2xl font-bold tracking-tighter mix-blend-difference cursor-pointer hover:scale-105 transition-transform" onclick="window.scrollTo(0,0)">
             <span id="nav-name">ADITYA</span><span class="text-pink-500">.</span>
         </div>
+        
+        <!-- Desktop Menu -->
         <div class="hidden md:flex gap-8 text-sm font-medium text-gray-300 mix-blend-difference bg-black/40 px-6 py-2 rounded-full border border-white/5 backdrop-blur-md">
             <a href="#home" class="hover:text-white hover:text-pink-400 transition-colors">Home</a>
+            <a href="#about" class="hover:text-white hover:text-pink-400 transition-colors">About</a>
             <a href="#work" class="hover:text-white hover:text-pink-400 transition-colors">Work</a>
             <a href="#experience" class="hover:text-white hover:text-pink-400 transition-colors">Experience</a>
-            <a href="#about" class="hover:text-white hover:text-pink-400 transition-colors">About</a>
+            <a href="#education" class="hover:text-white hover:text-pink-400 transition-colors">Education</a>
         </div>
-        <a href="#contact" class="px-5 py-2 bg-white text-black text-sm font-semibold rounded-full hover:bg-pink-500 hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-            Contact Me
-        </a>
+
+        <div class="flex items-center gap-4">
+            <a href="#contact" class="hidden md:block px-5 py-2 bg-white text-black text-sm font-semibold rounded-full hover:bg-pink-500 hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                Contact Me
+            </a>
+            
+            <!-- Hamburger Button -->
+            <button id="menu-toggle" class="md:hidden text-white focus:outline-none p-2 glass-panel rounded-lg">
+                <i data-lucide="menu" id="menu-icon"></i>
+            </button>
+        </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-black/95 backdrop-blur-xl transition-all duration-500 transform translate-x-full md:hidden">
+        <div class="flex flex-col h-full bg-gradient-to-br from-indigo-950/20 to-black p-8">
+            <div class="flex justify-between items-center mb-12">
+                <div class="text-2xl font-bold tracking-tighter">
+                    <span>ADITYA</span><span class="text-pink-500">.</span>
+                </div>
+                <button id="menu-close" class="text-white p-2 glass-panel rounded-lg">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            
+            <div class="flex flex-col gap-6 text-2xl font-semibold">
+                <a href="#home" class="mobile-link text-gray-400 hover:text-pink-400 transition-colors">Home</a>
+                <a href="#about" class="mobile-link text-gray-400 hover:text-pink-400 transition-colors">About</a>
+                <a href="#work" class="mobile-link text-gray-400 hover:text-pink-400 transition-colors">Work</a>
+                <a href="#experience" class="mobile-link text-gray-400 hover:text-pink-400 transition-colors">Experience</a>
+                <a href="#education" class="mobile-link text-gray-400 hover:text-pink-400 transition-colors">Education</a>
+                <a href="#contact" class="mobile-link text-pink-400 mt-4">Contact Me</a>
+            </div>
+
+            <div class="mt-auto pb-12">
+                <p class="text-gray-500 text-sm mb-4">LETS CONNECT</p>
+                <div class="flex gap-6" id="mobile-social-links">
+                    <!-- Injected by JS -->
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main class="relative z-10">
         
@@ -35,7 +76,7 @@
             <div class="max-w-4xl relative">
                 <div class="absolute -inset-10 bg-gradient-to-r from-indigo-500/20 to-pink-500/20 blur-3xl -z-10 rounded-full opacity-50"></div>
                 
-                <p id="hero-role" class="text-pink-400 font-medium mb-4 tracking-widest uppercase text-sm animate-pulse">Full Stack Developer</p>
+                <p id="hero-role" class="text-pink-400 font-medium mb-4 tracking-widest uppercase text-sm">Full Stack Developer</p>
                 <h1 class="text-5xl md:text-8xl font-bold leading-tight mb-8">
                     <span id="hero-headline-1">Building</span> <br>
                     <span class="glitch-wrapper text-gradient" id="hero-glitch-text" data-text="Scalable">Scalable</span>
@@ -51,33 +92,6 @@
                     <a href="#contact" class="px-8 py-4 glass-panel rounded-full font-bold hover:bg-white/10 transition-all border border-white/20">
                         Contact Me
                     </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="work" class="min-h-screen py-24 px-6 md:px-24 flex flex-col justify-center">
-            <div class="mb-12">
-                <h2 class="text-4xl md:text-6xl font-bold mb-4">Selected Work</h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-indigo-500 to-pink-500"></div>
-            </div>
-
-            <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            </div>
-            
-            <div class="mt-12 p-6 glass-panel rounded-xl border border-white/5 text-center max-w-2xl mx-auto">
-                <p class="text-gray-400 text-sm">I have developed several other projects that are currently in the deployment pipeline. <br>Check back soon for more updates!</p>
-            </div>
-        </section>
-
-        <section id="experience" class="py-24 px-6 md:px-24 bg-black/20 backdrop-blur-sm">
-            <div class="mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Experience</h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-pink-500 to-indigo-500"></div>
-            </div>
-
-            <div class="max-w-3xl relative pl-8 md:pl-0">
-                <div class="timeline-line md:left-[-40px]"></div>
-                <div id="experience-list" class="space-y-12">
                 </div>
             </div>
         </section>
@@ -111,11 +125,48 @@
 
         </section>
 
+        <section id="work" class="min-h-screen py-24 px-6 md:px-24 flex flex-col justify-center">
+            <div class="mb-12">
+                <h2 class="text-4xl md:text-6xl font-bold mb-4">My Work</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-indigo-500 to-pink-500"></div>
+            </div>
+
+            <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            </div>
+            
+            <div class="mt-12 p-6 glass-panel rounded-xl border border-white/5 text-center max-w-2xl mx-auto">
+                <p class="text-gray-400 text-sm">I have developed several other projects that are currently in the deployment pipeline. <br>Check back soon for more updates!</p>
+            </div>
+        </section>
+
+        <section id="experience" class="py-24 px-6 md:px-24 bg-black/20 backdrop-blur-sm">
+            <div class="mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Experience</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-pink-500 to-indigo-500"></div>
+            </div>
+
+            <div class="max-w-3xl relative pl-8 md:pl-0">
+                <div class="timeline-line md:left-[-40px]"></div>
+                <div id="experience-list" class="space-y-12">
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="py-24 px-6 md:px-24">
+            <div class="mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Education</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-indigo-500 to-pink-500"></div>
+            </div>
+
+            <div id="education-list" class="max-w-4xl space-y-8">
+            </div>
+        </section>
+
         <section id="contact" class="min-h-[70vh] py-24 px-6 md:px-24 flex flex-col justify-center relative">
             <div class="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-full bg-gradient-to-l from-indigo-900/20 to-transparent blur-3xl -z-10"></div>
 
             <div class="max-w-3xl">
-                <h2 class="text-5xl md:text-7xl font-bold mb-8">Let's create something <span class="text-pink-500">extraordinary</span>.</h2>
+                <h2 class="text-5xl md:text-7xl font-bold mb-8">Let's create something <span class="text-pink-400">extraordinary</span>.</h2>
                 <p class="text-xl text-gray-400 mb-12">I am currently looking for work collaboration and freelancing opportunities.</p>
                 
                 <div class="w-full max-w-lg">
