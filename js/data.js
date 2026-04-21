@@ -63,7 +63,7 @@ export const portfolioData = {
             description: "A browser based developer workspace that consolidates the tools most developers keep scattered across tabs into one environment. It includes an AI assistant for architecture scaffolding and code generation, a full code editor with cloud synced snippets, a 3D visualizer that maps out any public GitHub repository, and a package analyzer for evaluating NPM dependencies. The whole thing is installable, works offline, and syncs your history across devices so nothing gets lost between sessions. Designed to save developers up to 60% of their routine workflow time.",
             tech: ["Vanilla JS", "Firebase", "Monaco", "Three.js", "Node.js", "PWA"],
             link: "https://vertex-devkit.vercel.app",
-            image: "/images/vertex.jpg"
+            image: "/projects/vertex.jpg"
         },
         {
             title: "PokeDex",
@@ -71,7 +71,7 @@ export const portfolioData = {
             description: "A comprehensive Pokémon encyclopedia covering over 1025 species across all 9 generations. Features include a Squad Analyzer that calculates Level 100 stats and evaluates team synergy, visual evolution chain tracking with precise requirements such as levels, items, and friendship, and a type matchup calculator for competitive play. The entire experience is delivered through a compact glassmorphic interface built on the App Router and Server Components architecture.",
             tech: ["Next.js 16", "React 19", "Tailwind CSS", "Radix UI", "PokeAPI"],
             link: "https://pokedex-project-db.vercel.app",
-            image: "/images/pokeball.png"
+            image: "/projects/pokeball.png"
         },
         {
             title: "Attendora",
@@ -79,7 +79,7 @@ export const portfolioData = {
             description: "A smart attendance tracking platform built for students. It includes an AI timetable scanner that can parse a photo of your schedule and automatically configure weekly classes using Llama 3.2 Vision. Other core features include predictive attendance goals, a bunk planner that calculates safe skip margins, an integrated GPA calculator, gamified achievements to keep users engaged, and full CSV report exports. All data stays synced across devices through Firebase.",
             tech: ["Vanilla JS", "Firebase", "OpenRouter AI", "PWA", "Chart.js"],
             link: "https://attendora-sat.vercel.app/",
-            image: "/images/attendora.webp"
+            image: "/projects/attendora.webp"
         },
         {
             title: "PULSE",
@@ -87,7 +87,7 @@ export const portfolioData = {
             description: "A unified health dashboard that consolidates activity, sleep, stress, and nutrition tracking into a single interface. It integrates a Gemini AI chatbot that supports both text and voice queries for health guidance. Additional tools include a BMI calculator, a symptom checker, a PDF report generator, and custom workout and nutrition planners. The platform also features a simulated telemedicine interface for booking consultations, and runs as an installable PWA with full offline support.",
             tech: ["Vanilla JS", "Tailwind CSS", "Chart.js", "Gemini AI", "jsPDF", "PWA"],
             link: "https://pulse-kappa-two.vercel.app/#",
-            image: "/images/pulse.png"
+            image: "/projects/pulse.png"
         },
     ],
 
@@ -110,22 +110,22 @@ export const portfolioData = {
         {
             title: "Smart India Hackathon 2025",
             issuer: "Govt of India",
-            image: "/images/SIH certificate.jpg"
+            image: "/certifications/SIH certificate.jpg"
         },
         {
             title: "Build with Gemini Hackathon",
             issuer: "Google",
-            image: "/images/build-with-gemini-certi.jpeg"
+            image: "/certifications/build-with-gemini-certi.jpeg"
         },
         {
             title: "SUI x NS Workshop",
             issuer: "SUI",
-            image: "/images/SUI-Workshop-NS-Certi.jpeg"
+            image: "/certifications/SUI-Workshop-NS-Certi.jpeg"
         },
         {
             title: "ACE(M) Hackathon",
             issuer: "ACE",
-            image: "/images/ACE(M)-Hack-Certi.jpeg"
+            image: "/certifications/ACE(M)-Hack-Certi.jpeg"
         }
     ]
 };
