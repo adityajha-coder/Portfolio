@@ -9,6 +9,7 @@ import { renderSoftSkills } from './components/softSkills.js';
 import { renderContact } from './components/contact.js';
 import { renderFooter } from './components/footer.js';
 import { renderEducation } from './components/education.js';
+import { renderCertifications } from './components/certifications.js';
 
 function init() {
     renderNav(portfolioData);
@@ -20,6 +21,7 @@ function init() {
     renderSoftSkills(portfolioData.softSkills);
     renderContact(portfolioData);
     renderEducation(portfolioData.education);
+    renderCertifications(portfolioData.certifications);
     renderFooter(portfolioData);
     
     // Initialize Lucide icons

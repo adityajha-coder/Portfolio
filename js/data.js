@@ -104,5 +104,28 @@ export const portfolioData = {
         { name: "GitHub", url: "https://github.com/adityajha-coder", icon: "github" },
         { name: "LinkedIn", url: "https://www.linkedin.com/in/aditya-jha-8534a1305/", icon: "linkedin" },
         { name: "Instagram", url: "https://instagram.com/adjzyy", icon: "instagram" }
+    ],
+
+    certifications: [
+        {
+            title: "Smart India Hackathon 2025",
+            issuer: "Govt of India",
+            image: "/images/SIH certificate.jpg"
+        },
+        {
+            title: "Build with Gemini Hackathon",
+            issuer: "Google",
+            image: "/images/build-with-gemini-certi.jpeg"
+        },
+        {
+            title: "SUI x NS Workshop",
+            issuer: "SUI",
+            image: "/images/SUI-Workshop-NS-Certi.jpeg"
+        },
+        {
+            title: "ACE(M) Hackathon",
+            issuer: "ACE",
+            image: "/images/ACE(M)-Hack-Certi.jpeg"
+        }
     ]
 };
