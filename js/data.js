@@ -113,20 +113,20 @@ export const portfolioData = {
             issuer: "Govt of India",
             image: "/certifications/SIH certificate.jpg"
         },
-        {
-            title: "Build with Gemini Hackathon",
-            issuer: "Google",
-            image: "/certifications/build-with-gemini-certi.jpeg"
-        },
+        // {
+        //     title: "Build with Gemini Hackathon",
+        //     issuer: "Google",
+        //     image: "/certifications/build-with-gemini-certi.jpeg"
+        // },
         {
             title: "SUI x NS Workshop",
             issuer: "SUI",
             image: "/certifications/SUI-Workshop-NS-Certi.jpeg"
         },
-        {
-            title: "ACE(M) Hackathon",
-            issuer: "ACE",
-            image: "/certifications/ACE(M)-Hack-Certi.jpeg"
-        }
+        // {
+        //     title: "ACE(M) Hackathon",
+        //     issuer: "ACE",
+        //     image: "/certifications/ACE(M)-Hack-Certi.jpeg"
+        // }
     ]
 };
