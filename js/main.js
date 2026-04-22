@@ -24,10 +24,12 @@ function init() {
     renderCertifications(portfolioData.certifications);
     renderFooter(portfolioData);
     
-    // Initialize Lucide icons
+    // load icons
     if (window.lucide) {
         window.lucide.createIcons();
     }
+
+
 }
 
 document.addEventListener('DOMContentLoaded', init);

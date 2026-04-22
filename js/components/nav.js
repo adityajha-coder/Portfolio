@@ -31,7 +31,7 @@ export function renderNav(data) {
         });
     });
 
-    // Inject social links into mobile menu
+    // add mobile socials
     if (mobileSocialLinks && data.socials) {
         mobileSocialLinks.innerHTML = data.socials.map(social => `
             <a href="${social.url}" target="_blank" class="text-gray-400 hover:text-pink-400 transition-all transform hover:scale-110">

@@ -129,7 +129,7 @@ body {
     background: #555;
 }
 
-/* Project Cards */
+/* projects */
 
 .project-card {
     position: relative;
@@ -148,7 +148,7 @@ body {
     flex-direction: column;
 }
 
-/* Image area */
+/* image wrapper */
 .project-image-wrap {
     position: relative;
     aspect-ratio: 16 / 9;
@@ -198,7 +198,7 @@ body {
     letter-spacing: 0.08em;
 }
 
-/* Content area */
+/* contents */
 .project-content {
     padding: 24px;
     display: flex;
@@ -222,7 +222,7 @@ body {
     flex: 1;
 }
 
-/* Tech pills */
+/* tech tags */
 .project-tech-row {
     display: flex;
     flex-wrap: wrap;
@@ -242,7 +242,7 @@ body {
     letter-spacing: 0.02em;
 }
 
-/* Footer link */
+/* footer link */
 .project-footer {
     padding-top: 16px;
     border-top: 1px solid rgba(255, 255, 255, 0.06);
@@ -259,7 +259,7 @@ body {
     letter-spacing: 0.01em;
 }
 
-/* Responsive tweaks */
+/* mobile stuff */
 @media (max-width: 768px) {
     .project-content {
         padding: 18px;
@@ -278,3 +278,4 @@ body {
     transform: translateY(-5px);
     color: #d946ef;
 }
+

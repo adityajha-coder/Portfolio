@@ -2,7 +2,7 @@ export function renderCertifications(certifications) {
     const certificationsContainer = document.getElementById('certifications-list');
     if (!certificationsContainer) return;
 
-    // Clear existing content to prevent duplication on re-renders
+    // clear container
     certificationsContainer.innerHTML = '';
 
     certifications.forEach((cert, index) => {
@@ -26,7 +26,7 @@ export function renderCertifications(certifications) {
         certificationsContainer.innerHTML += itemHtml;
     });
 
-    // Add event listeners for the accordion
+    // accordion click handler
     const toggleButtons = document.querySelectorAll('.cert-accordion-toggle');
     toggleButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -35,15 +35,15 @@ export function renderCertifications(certifications) {
             const icon = document.querySelector(`.cert-icon-${index}`);
 
             if (content.classList.contains('hidden')) {
-                // Show
+                // show
                 content.classList.remove('hidden');
-                // Use a short timeout to allow the display:block to render before triggering opacity/transform transitions if any were added
+                // allow paint
                 setTimeout(() => {
                     icon.style.transform = 'rotate(180deg)';
                     icon.classList.replace('text-gray-300', 'text-pink-400');
                 }, 10);
             } else {
-                // Hide
+                // hide
                 content.classList.add('hidden');
                 icon.style.transform = 'rotate(0deg)';
                 icon.classList.replace('text-pink-400', 'text-gray-300');
@@ -51,7 +51,7 @@ export function renderCertifications(certifications) {
         });
     });
 
-    // Refresh lucide icons for newly added elements
+    // reload icons
     if (window.lucide && typeof window.lucide.createIcons === 'function') {
         window.lucide.createIcons();
     }

@@ -6,8 +6,8 @@ export const portfolioData = {
     email: "adityajha97172@gmail.com",
 
     longBio: [
-        "I craft digital experiences where exceptional design meets raw performance. As a Full Stack Developer, I specialize in architecting responsive, scalable web platforms that don't just look stunning, but operate flawlessly under the hood. My core engineering philosophy is simple: build intuitive tools that solve real problems.",
-        "My technical foundation spans from low-level algorithms in C/C++ to the modern, lightning-fast ecosystems of Next.js, React, and Three.js. By bridging dynamic UI/UX design with scalable serverless backends and emerging AI technologies, I engineer applications built for the future of the web."
+        "I craft digital experiences where exceptional design meets raw performance. As a Full Stack Developer (MERN), I specialize in architecting responsive, scalable web platforms that don't just look stunning, but operate flawlessly under the hood. My core engineering philosophy is simple: build intuitive tools that solve real problems.",
+        "My technical foundation spans from algorithms in C/C++ to the modern, lightning-fast ecosystems of Next.js, React, and Three.js. By bridging dynamic UI/UX design with scalable serverless backends and emerging AI technologies, I engineer applications built for the future of the web."
     ],
 
     skills: {
@@ -93,10 +93,11 @@ export const portfolioData = {
 
     education: [
         {
-            institution: "Bhagwan Parshuram Institute of Technology (BPIT)",
+            institution: "Bhagwan Parshuram Institute of Technology",
             affiliation: "Affiliated To GGSIPU",
             degree: "B.Tech Computer Science Engineering (Data Science)",
-            year: "2024-2028"
+            year: "2024-2028",
+            logo: "/projects/BPIT.webp"
         }
     ],
 
