@@ -17,7 +17,8 @@ geometry.rotateX(-Math.PI / 2); // Lay flat
 const pos = geometry.attributes.position;
 const count = pos.count;
 const colors = new Float32Array(count * 3);
-const colorPink = new THREE.Color(0xec4899);
+// const colorPink = new THREE.Color(0xec4899);
+const colorBase = new THREE.Color(0x0a0a2e); 
 const colorCyan = new THREE.Color(0x06b6d4);
 
 // build color gradient
@@ -25,7 +26,7 @@ for(let i = 0; i < count; i++) {
     const x = pos.getX(i);
     const z = pos.getZ(i);
     const mixRatio = (Math.sin(x * 0.05) + Math.cos(z * 0.05) + 2) / 4; 
-    const c = colorPink.clone().lerp(colorCyan, mixRatio);
+    const c = colorBase.clone().lerp(colorCyan, mixRatio);
     colors[i * 3] = c.r;
     colors[i * 3 + 1] = c.g;
     colors[i * 3 + 2] = c.b;
