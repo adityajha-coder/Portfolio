@@ -18,14 +18,14 @@ const pos = geometry.attributes.position;
 const count = pos.count;
 const colors = new Float32Array(count * 3);
 // const colorPink = new THREE.Color(0xec4899);
-const colorBase = new THREE.Color(0x0a0a2e); 
+const colorBase = new THREE.Color(0x0a0a2e);
 const colorCyan = new THREE.Color(0x06b6d4);
 
 // build color gradient
-for(let i = 0; i < count; i++) {
+for (let i = 0; i < count; i++) {
     const x = pos.getX(i);
     const z = pos.getZ(i);
-    const mixRatio = (Math.sin(x * 0.05) + Math.cos(z * 0.05) + 2) / 4; 
+    const mixRatio = (Math.sin(x * 0.05) + Math.cos(z * 0.05) + 2) / 4;
     const c = colorBase.clone().lerp(colorCyan, mixRatio);
     colors[i * 3] = c.r;
     colors[i * 3 + 1] = c.g;
@@ -92,39 +92,39 @@ const clock = new THREE.Clock();
 
 const tick = () => {
     const elapsedTime = clock.getElapsedTime();
-    
+
     targetX = mouseX * 0.008;
     targetY = mouseY * 0.008;
-    
+
     // cap scroll ratio
     const maxScroll = Math.max(1, document.body.scrollHeight - window.innerHeight);
     const scrollRatio = Math.min(1, Math.max(0, scrollY / maxScroll));
-    
+
     // camera path logic
-    const desiredY = 6 - (scrollRatio * 7) + (-targetY); 
+    const desiredY = 6 - (scrollRatio * 7) + (-targetY);
     const desiredZ = 15 - (scrollRatio * 40);
 
     camera.position.x += (targetX - camera.position.x) * 0.03;
     camera.position.y += (desiredY - camera.position.y) * 0.05;
     camera.position.z += (desiredZ - camera.position.z) * 0.05;
-    
+
     // tilt camera
     camera.lookAt(0, -2 + (scrollRatio * 2), -10);
 
     // wave animation
-    for(let i = 0; i < pos.count; i++) {
+    for (let i = 0; i < pos.count; i++) {
         const x = pos.getX(i);
         const z = pos.getZ(i);
-        
+
         // math magic
         const wave1 = Math.sin(x * 0.15 + elapsedTime * 1.0) * 2.2;
         const wave2 = Math.cos(z * 0.15 - elapsedTime * 0.9) * 1.6;
         const wave3 = Math.sin((x + z) * 0.1 + elapsedTime * 1.4) * 1.0;
-        
+
         pos.setY(i, wave1 + wave2 + wave3);
     }
     pos.needsUpdate = true;
-    
+
     // slight rotation
     terrain.rotation.y = elapsedTime * 0.08;
     wireTerrain.rotation.y = elapsedTime * 0.08;

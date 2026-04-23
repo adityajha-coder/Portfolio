@@ -69,7 +69,7 @@ export const portfolioData = {
             title: "PokeDex",
             category: "Interactive Web App",
             description: "A comprehensive Pokémon encyclopedia covering over 1025 species across all 9 generations. Features include a Squad Analyzer that calculates Level 100 stats and evaluates team synergy, visual evolution chain tracking with precise requirements such as levels, items, and friendship, and a type matchup calculator for competitive play. The entire experience is delivered through a compact glassmorphic interface built on the App Router and Server Components architecture.",
-            tech: ["Next.js 16", "React 19", "Tailwind CSS", "Radix UI", "PokeAPI"],
+            tech: ["Next.js", "React", "Tailwind CSS", "Radix UI", "PokeAPI"],
             link: "https://pokedex-project-db.vercel.app",
             image: "/projects/pokeball.png"
         },
@@ -108,19 +108,24 @@ export const portfolioData = {
     ],
 
     certifications: [
-        {
-            title: "Smart India Hackathon 2025",
-            issuer: "Govt of India",
-            image: "/certifications/SIH certificate.jpg"
-        },
+        // {
+        //     title: "Smart India Hackathon 2025",
+        //     // issuer: "Govt of India",
+        //     image: "/certifications/SIH certificate.jpg"
+        // },
         // {
         //     title: "Build with Gemini Hackathon",
         //     issuer: "Google",
         //     image: "/certifications/build-with-gemini-certi.jpeg"
         // },
         {
+            title: "Google Developer on Campus",
+            // issuer: "GDG-BPIT",
+            image: "/certifications/gdg-certi.png"
+        },
+        {
             title: "SUI x NS Workshop",
-            issuer: "SUI",
+            // issuer: "SUI",
             image: "/certifications/SUI-Workshop-NS-Certi.jpeg"
         },
         // {
