@@ -70,7 +70,7 @@ export const portfolioData = {
             title: "TrivoXa",
             category: "Developer Toolkit",
             description: "A browser based developer workspace that consolidates the tools most developers keep scattered across tabs into one environment. It includes an AI assistant and an ai architecture scaffolding, a personal workspace, a 3D visualizer that maps out any public GitHub repository, and a package analyzer for evaluating NPM dependencies. The whole thing is installable, works offline, and syncs your history across devices so nothing gets lost between sessions. Designed to save developers up to 60% of their routine workflow time.",
-            tech: ["Vanilla JS", "Firebase", "Monaco", "Three.js", "Node.js", "PWA"],
+            tech: ["JavaScript", "Node.js", "Express", "MongoDB", "Three.js", "JWT"],
             link: "https://trivoxa.vercel.app",
             image: "/projects/vertex.jpg"
         },
