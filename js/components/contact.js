@@ -20,7 +20,7 @@ export function renderContact(data) {
                 const svgIcon = ICON_MAP[iconKey] || `<i data-lucide="${iconKey}" width="20"></i>`;
                 return `
                     <a href="${s.url}" target="_blank" rel="noopener noreferrer" aria-label="${s.name}"
-                       class="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 text-gray-200 hover:bg-pink-500 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-[0_0_15px_rgba(236,72,153,0.5)]">
+                       class="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 text-gray-200 hover:bg-pink-500 hover:text-white transition-all duration-300 hover:scale-110">
                         ${svgIcon}
                     </a>
                 `;

@@ -2,12 +2,14 @@ export const portfolioData = {
     name: "Aditya Jha",
     role: "Full Stack Developer",
     heroHeadline: ["Building", "Full Stack", "Solutions"],
-    shortBio: "Engineering the digital frontlines. I build high-performance, full-stack web applications with a focus on seamless design and robust AI integrations.",
-    email: "adityajha97172@gmail.com",
+    shortBio: "Hi, I am Aditya Jha. I am a Full Stack MERN Developer with a passion for exploring emerging technologies and building innovative web solutions.",
+    email: "developer.adityajha@gmail.com",
 
     longBio: [
-        "I craft digital experiences where exceptional design meets raw performance. As a Full Stack Developer (MERN), I specialize in architecting responsive, scalable web platforms that don't just look stunning, but operate flawlessly under the hood. My core engineering philosophy is simple: build intuitive tools that solve real problems.",
-        "My technical foundation spans from algorithms in C/C++ to the modern, lightning-fast ecosystems of Next.js, React, and Three.js. By bridging dynamic UI/UX design with scalable serverless backends and emerging AI technologies, I engineer applications built for the future of the web."
+        "I’m a Full Stack Developer specializing in high performance web applications, AI integrations, and scalable web architecture. I focus on building modern, user centric digital experiences that combine robust engineering and seamless performance.",
+        "My work spans across developer focused platforms, AI-powered solutions, and scalable SaaS products. From comprehensive developer ecosystems like TrivoXa to intelligent health-tech and ed-tech solutions such as PULSE and Attendora, I aim to create applications that are both technically resilient and impactful in real world use cases.",
+        "Leveraging a strong foundation in core algorithms and modern frameworks like Next.js, React, and Node.js, I enjoy bridging dynamic frontend experiences with secure, scalable backend systems while maintaining performance, accessibility, and maintainability at every stage of development.",
+        "Beyond development, I am actively growing in the open-source ecosystem, contributing to projects, collaborating with developers, and continuously expanding my understanding of modern software engineering practices. I am deeply committed to continuous learning, innovation, and solving meaningful problems through technology, always striving to become a better engineer and a better version of myself every day."
     ],
 
     skills: {
@@ -49,8 +51,15 @@ export const portfolioData = {
 
     experience: [
         {
+            year: "May - Present",
+            title: "Contributor",
+            company: "GSSoc'26",
+            description: "Contributing to open-source projects under GirlScript Summer of Code, collaborating with developers globally, and writing code to solve real-world issues.",
+            logo: "/Pics/gssoc.jpg"
+        },
+        {
             year: "Present",
-            title: "Freelance & Collaboration",
+            title: "Collaboration & Freelance",
             company: "Open to Work",
             description: "Currently looking for work collaboration and freelancing opportunities. Building robust personal projects and expanding technical expertise in AI tools and modern web frameworks."
         }
@@ -58,11 +67,11 @@ export const portfolioData = {
 
     projects: [
         {
-            title: "Vertex",
+            title: "TrivoXa",
             category: "Developer Toolkit",
-            description: "A browser based developer workspace that consolidates the tools most developers keep scattered across tabs into one environment. It includes an AI assistant for architecture scaffolding and code generation, a full code editor with cloud synced snippets, a 3D visualizer that maps out any public GitHub repository, and a package analyzer for evaluating NPM dependencies. The whole thing is installable, works offline, and syncs your history across devices so nothing gets lost between sessions. Designed to save developers up to 60% of their routine workflow time.",
+            description: "A browser based developer workspace that consolidates the tools most developers keep scattered across tabs into one environment. It includes an AI assistant and an ai architecture scaffolding, a personal workspace, a 3D visualizer that maps out any public GitHub repository, and a package analyzer for evaluating NPM dependencies. The whole thing is installable, works offline, and syncs your history across devices so nothing gets lost between sessions. Designed to save developers up to 60% of their routine workflow time.",
             tech: ["Vanilla JS", "Firebase", "Monaco", "Three.js", "Node.js", "PWA"],
-            link: "https://vertex-devkit.vercel.app",
+            link: "https://trivoxa.vercel.app",
             image: "/projects/vertex.jpg"
         },
         {
