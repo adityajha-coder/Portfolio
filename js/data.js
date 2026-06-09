@@ -2,11 +2,11 @@ export const portfolioData = {
     name: "Aditya Jha",
     role: "Full Stack Developer",
     heroHeadline: ["Building", "Full Stack", "Solutions"],
-    shortBio: "Hi, I am Aditya Jha. I am a Full Stack MERN Developer with a passion for exploring emerging technologies and building innovative web solutions.",
+    shortBio: "Hi, I'm Aditya Jha, a Full Stack MERN Developer who loves thinking of new ideas and turning them into reality through code.",
     email: "developer.adityajha@gmail.com",
 
     longBio: [
-        "I’m a Full Stack Developer specializing in high performance web applications, AI integrations, and scalable web architecture. I focus on building modern, user centric digital experiences that combine robust engineering and seamless performance.",
+        "I’m a Full Stack Developer. Passionate about emerging technologies and innovation, I enjoy building modern web applications that solve real world problems and create meaningful imapact. I focus on building modern, user centric digital experiences that combine robust engineering and seamless performance.",
         "My work spans across developer focused platforms, AI-powered solutions, and scalable SaaS products. From comprehensive developer ecosystems like TrivoXa to intelligent health-tech and ed-tech solutions such as PULSE and Attendora, I aim to create applications that are both technically resilient and impactful in real world use cases.",
         "Leveraging a strong foundation in core algorithms and modern frameworks like Next.js, React, and Node.js, I enjoy bridging dynamic frontend experiences with secure, scalable backend systems while maintaining performance, accessibility, and maintainability at every stage of development.",
         "Beyond development, I am actively growing in the open-source ecosystem, contributing to projects, collaborating with developers, and continuously expanding my understanding of modern software engineering practices. I am deeply committed to continuous learning, innovation, and solving meaningful problems through technology, always striving to become a better engineer and a better version of myself every day."
@@ -17,6 +17,7 @@ export const portfolioData = {
             { name: "C", icon: "devicon-c-plain colored" },
             { name: "C++", icon: "devicon-cplusplus-plain colored" },
             { name: "JavaScript", icon: "devicon-javascript-plain colored" },
+            { name: "TypeScript", icon: "devicon-typescript-plain colored"},
             { name: "HTML5", icon: "devicon-html5-plain colored" },
             { name: "CSS3", icon: "devicon-css3-plain colored" }
         ],
@@ -24,20 +25,27 @@ export const portfolioData = {
             { name: "React", icon: "devicon-react-original colored" },
             { name: "Next.js", icon: "devicon-nextjs-plain" },
             { name: "Tailwind CSS", icon: "devicon-tailwindcss-original colored" },
-            { name: "Three.js", icon: "devicon-threejs-original" }
+            { name: "Three.js", icon: "devicon-threejs-original" },
+            { name: "Framer Motion", icon: "devicon-framermotion-original" }
         ],
         backend: [
             { name: "Node.js", icon: "devicon-nodejs-plain colored" },
             { name: "Express", icon: "devicon-express-original" },
-            { name: "REST API", icon: "devicon-swagger-plain colored" }
+            { name: "REST API", icon: "devicon-swagger-plain colored" },
+            { name: "MongoDB", icon: "devicon-mongodb-plain colored" },
+            { name: "Firebase", icon: "devicon-firebase-plain colored" },
+            {name: "Supabase", icon: "devicon-supabase-plain colored"},
         ],
         database: [
             { name: "MongoDB", icon: "devicon-mongodb-plain colored" },
-            { name: "Firebase", icon: "devicon-firebase-plain colored" }
+            { name: "Firebase", icon: "devicon-firebase-plain colored" },
+            {name: "Supabase", icon: "devicon-supabase-plain colored"},
         ],
         tools: [
             { name: "Git", icon: "devicon-git-plain colored" },
-            { name: "GitHub", icon: "devicon-github-original" }
+            { name: "GitHub", icon: "devicon-github-original" },
+            { name : "Postman", icon: "devicon-postman-plain colored" },
+            {name: "Docker", icon: "devicon-docker-plain colored"},
         ]
     },
 
@@ -45,6 +53,8 @@ export const portfolioData = {
         { name: "Leadership" },
         { name: "Team Work" },
         { name: "Conflict Resolution" },
+        { name: "Critical Thinking"},
+        { name: "Problem Solving"},
         { name: "Networking" },
         { name: "Communication" }
     ],
@@ -72,7 +82,7 @@ export const portfolioData = {
             description: "A browser based developer workspace that consolidates the tools most developers keep scattered across tabs into one environment. It includes an AI assistant and an ai architecture scaffolding, a personal workspace, a 3D visualizer that maps out any public GitHub repository, and a package analyzer for evaluating NPM dependencies. The whole thing is installable, works offline, and syncs your history across devices so nothing gets lost between sessions. Designed to save developers up to 60% of their routine workflow time.",
             tech: ["JavaScript", "Node.js", "Express", "MongoDB", "Three.js", "JWT"],
             link: "https://trivoxa.vercel.app",
-            image: "/projects/vertex.jpg"
+            image: "/projects/trivoxa.png"
         },
         {
             title: "PokeDex",
@@ -80,7 +90,7 @@ export const portfolioData = {
             description: "A comprehensive Pokémon encyclopedia covering over 1025 species across all 9 generations. Features include a Squad Analyzer that calculates Level 100 stats and evaluates team synergy, visual evolution chain tracking with precise requirements such as levels, items, and friendship, and a type matchup calculator for competitive play. The entire experience is delivered through a compact glassmorphic interface built on the App Router and Server Components architecture.",
             tech: ["Next.js", "React", "Tailwind CSS", "Radix UI", "PokeAPI"],
             link: "https://pokedex-project-db.vercel.app",
-            image: "/projects/pokeball.png"
+            image: "/projects/pokedex.png"
         },
         {
             title: "Attendora",
@@ -88,7 +98,7 @@ export const portfolioData = {
             description: "A smart attendance tracking platform built for students. It includes an AI timetable scanner that can parse a photo of your schedule and automatically configure weekly classes using Llama 3.2 Vision. Other core features include predictive attendance goals, a bunk planner that calculates safe skip margins, an integrated GPA calculator, gamified achievements to keep users engaged, and full CSV report exports. All data stays synced across devices through Firebase.",
             tech: ["Vanilla JS", "Firebase", "OpenRouter AI", "PWA", "Chart.js"],
             link: "https://attendora-sat.vercel.app/",
-            image: "/projects/attendora.webp"
+            image: "/projects/attendora.png"
         },
         {
             title: "PULSE",

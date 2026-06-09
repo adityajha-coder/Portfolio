@@ -2,7 +2,6 @@ export function renderProjects(projects) {
     const projectGrid = document.getElementById('project-grid');
     if (!projectGrid) return;
 
-    // 2-col large screen layout
     projectGrid.className = 'grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10';
 
     projects.forEach((project, index) => {
@@ -37,7 +36,6 @@ export function renderProjects(projects) {
         projectGrid.innerHTML += card;
     });
 
-    // load icons
     if (window.lucide && typeof lucide.replace === 'function') {
         lucide.replace();
     }

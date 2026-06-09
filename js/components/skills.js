@@ -7,7 +7,6 @@ export function renderSkills(skills) {
         languages: "Languages",
         frontend: "Frontend",
         backend: "Backend",
-        database: "Database",
         tools: "Tools"
     };
 

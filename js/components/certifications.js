@@ -2,7 +2,6 @@ export function renderCertifications(certifications) {
     const certificationsContainer = document.getElementById('certifications-list');
     if (!certificationsContainer) return;
 
-    // clear container
     certificationsContainer.innerHTML = '';
 
     certifications.forEach((cert, index) => {
@@ -26,7 +25,6 @@ export function renderCertifications(certifications) {
         certificationsContainer.innerHTML += itemHtml;
     });
 
-    // accordion click handler
     const toggleButtons = document.querySelectorAll('.cert-accordion-toggle');
     toggleButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -35,15 +33,12 @@ export function renderCertifications(certifications) {
             const icon = document.querySelector(`.cert-icon-${index}`);
 
             if (content.classList.contains('hidden')) {
-                // show
                 content.classList.remove('hidden');
-                // allow paint
                 setTimeout(() => {
                     icon.style.transform = 'rotate(180deg)';
                     icon.classList.replace('text-gray-300', 'text-pink-400');
                 }, 10);
             } else {
-                // hide
                 content.classList.add('hidden');
                 icon.style.transform = 'rotate(0deg)';
                 icon.classList.replace('text-pink-400', 'text-gray-300');
@@ -51,7 +46,7 @@ export function renderCertifications(certifications) {
         });
     });
 
-    // reload icons
+    //icons reload
     if (window.lucide && typeof window.lucide.createIcons === 'function') {
         window.lucide.createIcons();
     }

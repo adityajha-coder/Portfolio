@@ -31,7 +31,7 @@ export function renderNav(data) {
         });
     });
 
-    // add mobile socials
+    // mobile socials
     if (mobileSocialLinks && data.socials) {
         mobileSocialLinks.innerHTML = data.socials.map(social => `
             <a href="${social.url}" target="_blank" class="text-gray-400 hover:text-pink-400 transition-all transform hover:scale-110">

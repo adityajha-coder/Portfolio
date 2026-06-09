@@ -26,7 +26,6 @@ export function renderContact(data) {
                 `;
             }).join('');
 
-            // fallback to lucide
             if (window.lucide && typeof window.lucide.createIcons === 'function') {
                 try { window.lucide.createIcons(); } catch (e) { /* ignore */ }
             }

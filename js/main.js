@@ -24,7 +24,6 @@ function init() {
     renderCertifications(portfolioData.certifications);
     renderFooter(portfolioData);
     
-    // load icons
     if (window.lucide) {
         window.lucide.createIcons();
     }

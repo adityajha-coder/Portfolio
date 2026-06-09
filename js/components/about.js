@@ -28,7 +28,7 @@ export function renderAbout(data) {
         while(n = walk.nextNode()) {
             if(n.nodeValue.trim() !== '') {
                 textNodes.push({ node: n, text: n.nodeValue });
-                n.nodeValue = ''; // empty text
+                n.nodeValue = '';
             }
         }
         
@@ -43,7 +43,6 @@ export function renderAbout(data) {
              if (currentNodeIndex < textNodes.length) {
                  const currentObj = textNodes[currentNodeIndex];
                  
-                 // move cursor
                  if (currentObj.node.parentNode && cursor.parentNode !== currentObj.node.parentNode) {
                      currentObj.node.parentNode.appendChild(cursor);
                  }
@@ -51,13 +50,11 @@ export function renderAbout(data) {
                  if (charIndex < currentObj.text.length) {
                      currentObj.node.nodeValue += currentObj.text.charAt(charIndex);
                      charIndex++;
-                     // dynamic speed
                      setTimeout(typeStep, 20 + Math.random() * 30); 
                  } else {
                      currentNodeIndex++;
                      charIndex = 0;
-                     // pause
-                     setTimeout(typeStep, 60); 
+                     setTimeout(typeStep, 60); //pause
                  }
              } else {
                  if (cursor.parentNode) cursor.parentNode.removeChild(cursor);

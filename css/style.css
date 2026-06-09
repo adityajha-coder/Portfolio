@@ -198,7 +198,6 @@ body {
     letter-spacing: 0.08em;
 }
 
-/* contents */
 .project-content {
     padding: 24px;
     display: flex;
@@ -242,7 +241,6 @@ body {
     letter-spacing: 0.02em;
 }
 
-/* footer link */
 .project-footer {
     padding-top: 16px;
     border-top: 1px solid rgba(255, 255, 255, 0.06);

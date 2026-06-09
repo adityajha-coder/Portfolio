@@ -12,16 +12,16 @@ canvasContainer.appendChild(renderer.domElement);
 
 // matrix grid
 const geometry = new THREE.PlaneGeometry(400, 400, 150, 150);
-geometry.rotateX(-Math.PI / 2); // Lay flat
+geometry.rotateX(-Math.PI / 2);
 
 const pos = geometry.attributes.position;
 const count = pos.count;
 const colors = new Float32Array(count * 3);
-// const colorPink = new THREE.Color(0xec4899);
+// const colorPink = new THREE.Color(0xec4899)(cyan);
 const colorBase = new THREE.Color(0x0a0a2e);
 const colorCyan = new THREE.Color(0x06b6d4);
 
-// build color gradient
+// color gradient
 for (let i = 0; i < count; i++) {
     const x = pos.getX(i);
     const z = pos.getZ(i);
@@ -45,16 +45,16 @@ const material = new THREE.PointsMaterial({
 const terrain = new THREE.Points(geometry, material);
 scene.add(terrain);
 
-// subtle wireframe underneath
+// wireframe
 const wireMaterial = new THREE.MeshBasicMaterial({
-    color: 0x4f46e5, // Deep Indigo
+    color: 0x4f46e5, 
     transparent: true,
     opacity: 0.08,
     wireframe: true,
     blending: THREE.AdditiveBlending
 });
 const wireTerrain = new THREE.Mesh(geometry, wireMaterial);
-wireTerrain.position.y = -0.1; // Place just slightly below points
+wireTerrain.position.y = -0.1;
 scene.add(wireTerrain);
 
 
@@ -96,11 +96,9 @@ const tick = () => {
     targetX = mouseX * 0.008;
     targetY = mouseY * 0.008;
 
-    // cap scroll ratio
     const maxScroll = Math.max(1, document.body.scrollHeight - window.innerHeight);
     const scrollRatio = Math.min(1, Math.max(0, scrollY / maxScroll));
 
-    // camera path logic
     const desiredY = 6 - (scrollRatio * 7) + (-targetY);
     const desiredZ = 15 - (scrollRatio * 40);
 
@@ -108,7 +106,6 @@ const tick = () => {
     camera.position.y += (desiredY - camera.position.y) * 0.05;
     camera.position.z += (desiredZ - camera.position.z) * 0.05;
 
-    // tilt camera
     camera.lookAt(0, -2 + (scrollRatio * 2), -10);
 
     // wave animation
