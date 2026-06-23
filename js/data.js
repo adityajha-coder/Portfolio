@@ -1,16 +1,36 @@
 export const portfolioData = {
     name: "Aditya Jha",
     role: "Full Stack Developer",
-    heroHeadline: ["Building", "Full Stack", "Solutions"],
+    heroHeadline: ["Building", "Full Stack", "Solutions."],
     shortBio: "Hi, I'm Aditya Jha, a Full Stack MERN Developer who loves thinking of new ideas and turning them into reality through code.",
     email: "developer.adityajha@gmail.com",
 
-    longBio: [
-        "I’m a Full Stack Developer. Passionate about emerging technologies and innovation, I enjoy building modern web applications that solve real world problems and create meaningful imapact. I focus on building modern, user centric digital experiences that combine robust engineering and seamless performance.",
-        "My work spans across developer focused platforms, AI-powered solutions, and scalable SaaS products. From comprehensive developer ecosystems like TrivoXa to intelligent health-tech and ed-tech solutions such as PULSE and Attendora, I aim to create applications that are both technically resilient and impactful in real world use cases.",
-        "Leveraging a strong foundation in core algorithms and modern frameworks like Next.js, React, and Node.js, I enjoy bridging dynamic frontend experiences with secure, scalable backend systems while maintaining performance, accessibility, and maintainability at every stage of development.",
-        "Beyond development, I am actively growing in the open-source ecosystem, contributing to projects, collaborating with developers, and continuously expanding my understanding of modern software engineering practices. Alongside I am also elevating myself into Data Structures and Algorithms and Competitive Programming. I am deeply committed to continuous learning, innovation, and solving meaningful problems through technology, always striving to become a better engineer and a better version of myself every day."
-    ],
+    aboutSections: {
+        whyProgramming: {
+            title: "Why I Started Programming",
+            points: [
+                "Ever since my childhood, I have possessed a strong fascination with technology and a deep curiosity to explore the underlying systems that power it.",
+                "This early interest eventually evolved into a focus on software engineering, driven by a desire to understand how modern applications operate behind the user interface.",
+                "Discovering programming revealed the immense power of code specifically, the capacity to transform conceptual designs into fully functional, accessible digital systems.",
+                "I developed a strong passion for analyzing logical challenges, structural algorithms, and building efficient solutions from the ground up."
+            ]
+        },
+        problemsEnjoyed: {
+            title: "Problems I Enjoy Solving",
+            points: [
+                "**Full-Stack Architecture**: Bridging interactive front-end interfaces with secure, modular, and high-performance back-end systems while integrating AI-powered capabilities.",
+                "**Practical Innovation**: Creating impactful, user focused solutions that solve practical problems across domains such as healthcare, education, and developer productivity.",
+                "**Algorithmic Optimization**: Applying deep knowledge of Data Structures and Algorithms (DSA) to write clean, optimized, and performant code."
+            ]
+        },
+        careerGoals: {
+            title: "My Career Goals",
+            points: [
+                "**Scalable Systems**: Designing and deploying cloud-ready architectures capable of supporting high concurrency and robust traffic demands.",
+                "**Technological Growth**: Staying at the forefront of AI integration, modern frameworks, and software design patterns to build resilient softwares."
+            ]
+        }
+    },
 
     skills: {
         languages: [
@@ -123,7 +143,8 @@ export const portfolioData = {
     socials: [
         { name: "GitHub", url: "https://github.com/adityajha-coder", icon: "github" },
         { name: "LinkedIn", url: "https://www.linkedin.com/in/aditya-jha-8534a1305/", icon: "linkedin" },
-        { name: "Instagram", url: "https://instagram.com/adjzyy", icon: "instagram" }
+        { name: "Instagram", url: "https://instagram.com/adjzyy", icon: "instagram" },
+        { name: "X", url: "https://x.com/AdityaJha_7", icon: "x" }
     ],
 
     certifications: [

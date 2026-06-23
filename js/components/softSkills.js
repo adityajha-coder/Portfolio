@@ -4,7 +4,7 @@ export function renderSoftSkills(softSkills) {
 
     softSkills.forEach(skill => {
         softSkillsList.innerHTML += `
-            <span class="px-4 py-2 glass-panel rounded-full text-sm text-gray-300 border border-white/10 hover:border-pink-500/50 hover:text-white transition-all cursor-default">
+            <span class="px-4 py-2 glass-panel rounded-full text-sm text-white border border-white/10 hover:border-pink-500/50 transition-all cursor-default">
                 ${skill.name}
             </span>`;
     });

@@ -31,13 +31,24 @@ export function renderNav(data) {
         });
     });
 
+const SOCIAL_TEXT_HOVER_MAP = {
+    github: 'hover:text-white',
+    linkedin: 'hover:text-[#0077b5]',
+    instagram: 'hover:text-[#ee2a7b]',
+    x: 'hover:text-white'
+};
+
     // mobile socials
     if (mobileSocialLinks && data.socials) {
-        mobileSocialLinks.innerHTML = data.socials.map(social => `
-            <a href="${social.url}" target="_blank" class="text-gray-400 hover:text-pink-400 transition-all transform hover:scale-110">
-                <i data-lucide="${social.icon}"></i>
-            </a>
-        `).join('');
+        mobileSocialLinks.innerHTML = data.socials.map(social => {
+            const iconKey = (social.icon || '').toLowerCase();
+            const hoverColor = SOCIAL_TEXT_HOVER_MAP[iconKey] || 'hover:text-pink-400';
+            return `
+                <a href="${social.url}" target="_blank" class="text-gray-400 ${hoverColor} transition-all transform hover:scale-110">
+                    <i data-lucide="${social.icon}"></i>
+                </a>
+            `;
+        }).join('');
         if (window.lucide) {
             window.lucide.createIcons();
         }
