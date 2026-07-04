@@ -6,7 +6,7 @@ const ICON_MAP = {
 };
 
 const SOCIAL_HOVER_MAP = {
-    github: 'hover:bg-[#24292e] hover:text-white hover:border-[#24292e]',
+    github: 'hover:bg-[#333] hover:text-white hover:border-[#24292e]',
     linkedin: 'hover:bg-[#0077b5] hover:text-white hover:border-[#0077b5]',
     instagram: 'hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] hover:text-white hover:border-transparent',
     x: 'hover:bg-[#000000] hover:text-white hover:border-[#000000]'

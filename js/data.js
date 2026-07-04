@@ -46,6 +46,7 @@ export const portfolioData = {
             { name: "Next.js", icon: "devicon-nextjs-plain" },
             { name: "Tailwind CSS", icon: "devicon-tailwindcss-original colored" },
             { name: "Three.js", icon: "devicon-threejs-original" },
+            { name: "GSAP", icon: "gsap" },
             { name: "Framer Motion", icon: "devicon-framermotion-original" }
         ],
         backend: [
@@ -102,6 +103,7 @@ export const portfolioData = {
             description: "A browser based developer workspace that consolidates the tools most developers keep scattered across tabs into one environment. It includes an AI assistant and an ai architecture scaffolding, a personal workspace, a 3D visualizer that maps out any public GitHub repository, and a package analyzer for evaluating NPM dependencies. The whole thing is installable, works offline, and syncs your history across devices so nothing gets lost between sessions. Designed to save developers up to 60% of their routine workflow time.",
             tech: ["JavaScript", "Node.js", "Express", "MongoDB", "Three.js", "JWT"],
             link: "https://trivoxa.vercel.app",
+            github: "https://github.com/adityajha-coder/TrivoXa",
             image: "/projects/trivoxa.png"
         },
         {
@@ -110,6 +112,7 @@ export const portfolioData = {
             description: "A comprehensive Pokémon encyclopedia covering over 1025 species across all 9 generations. Features include a Squad Analyzer that calculates Level 100 stats and evaluates team synergy, visual evolution chain tracking with precise requirements such as levels, items, and friendship, and a type matchup calculator for competitive play. The entire experience is delivered through a compact glassmorphic interface built on the App Router and Server Components architecture.",
             tech: ["Next.js", "React", "Tailwind CSS", "Radix UI", "PokeAPI"],
             link: "https://pokedex-project-db.vercel.app",
+            github: "https://github.com/adityajha-coder/PokeDex",
             image: "/projects/pokedex.png"
         },
         {
@@ -118,6 +121,7 @@ export const portfolioData = {
             description: "A smart attendance tracking platform built for students. It includes an AI timetable scanner that can parse a photo of your schedule and automatically configure weekly classes using Llama 3.2 Vision. Other core features include predictive attendance goals, a bunk planner that calculates safe skip margins, an integrated GPA calculator, gamified achievements to keep users engaged, and full CSV report exports. All data stays synced across devices through Firebase.",
             tech: ["Vanilla JS", "Firebase", "OpenRouter AI", "PWA", "Chart.js"],
             link: "https://attendora-sat.vercel.app/",
+            github: "https://github.com/adityajha-coder/Attendora-SAT",
             image: "/projects/attendora.png"
         },
         {
@@ -126,6 +130,7 @@ export const portfolioData = {
             description: "A unified health dashboard that consolidates activity, sleep, stress, and nutrition tracking into a single interface. It integrates a Gemini AI chatbot that supports both text and voice queries for health guidance. Additional tools include a BMI calculator, a symptom checker, a PDF report generator, and custom workout and nutrition planners. The platform also features a simulated telemedicine interface for booking consultations, and runs as an installable PWA with full offline support.",
             tech: ["Vanilla JS", "Tailwind CSS", "Chart.js", "Gemini AI", "jsPDF", "PWA"],
             link: "https://pulse-kappa-two.vercel.app/#",
+            github: "https://github.com/adityajha-coder/PULSE-Personal-Unified-Lifestyle-and-Smart-Empowerment",
             image: "/projects/pulse.png"
         },
     ],
