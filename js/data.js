@@ -26,7 +26,7 @@ export const portfolioData = {
         careerGoals: {
             title: "My Career Goals",
             points: [
-                "**Scalable Systems**: Designing and deploying cloud-ready architectures capable of supporting high concurrency and robust traffic demands.",
+                "**Successful Product**: Passionate about building and launching a high impact product from the ground up that creates genuine value for users.",
                 "**Technological Growth**: Staying at the forefront of AI integration, modern frameworks, and software design patterns to build resilient softwares."
             ]
         }
@@ -123,6 +123,15 @@ export const portfolioData = {
             link: "https://attendora-sat.vercel.app/",
             github: "https://github.com/adityajha-coder/Attendora-SAT",
             image: "/projects/attendora.png"
+        },
+        {
+            title: "getMost",
+            category: "Analyzer",
+            description: "getMost evaluates software engineering candidates by analyzing their public contributions on GitHub and LeetCode. The tool calibrates repository activity, language familiarity, coding consistency, and algorithmic skills against configurable baselines for various engineering roles. It generates a diagnostic dashboard and a structured skill development roadmap using LLM analysis.",
+            tech: ["Next.js", "React", "Tailwind CSS", "REST-API", "Vercel SDK", "Vitest"],
+            link: "https://get-most.vercel.app/",
+            github: "https://github.com/adityajha-coder/getMost",
+            image: "/projects/getMost.png"
         },
         {
             title: "PULSE",
