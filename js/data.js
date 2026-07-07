@@ -116,6 +116,15 @@ export const portfolioData = {
             image: "/projects/pokedex.png"
         },
         {
+            title: "SprintAPi",
+            category: "Resources Catelog",
+            description: "SprintAPI is a hand curated catalog built for developers who want to spend less time researching and more time building. It consolidates hundreds of production ready resources, categorized with precise details like authentication requirements, pricing rules, and utility workflows.",
+            tech: ["Next.js", "TypeScript", "Tailwind CSS", "JSON", "CDN"],
+            link: "https://sprintapi.vercel.app/",
+            github: "https://github.com/adityajha-coder/SprintAPi",
+            image: "/projects/sprintapi.png",
+        },
+        {
             title: "Attendora",
             category: "EdTech Solution",
             description: "A smart attendance tracking platform built for students. It includes an AI timetable scanner that can parse a photo of your schedule and automatically configure weekly classes using Llama 3.2 Vision. Other core features include predictive attendance goals, a bunk planner that calculates safe skip margins, an integrated GPA calculator, gamified achievements to keep users engaged, and full CSV report exports. All data stays synced across devices through Firebase.",
@@ -128,7 +137,7 @@ export const portfolioData = {
             title: "getMost",
             category: "Analyzer",
             description: "getMost evaluates software engineering candidates by analyzing their public contributions on GitHub and LeetCode. The tool calibrates repository activity, language familiarity, coding consistency, and algorithmic skills against configurable baselines for various engineering roles. It generates a diagnostic dashboard and a structured skill development roadmap using LLM analysis.",
-            tech: ["Next.js", "React", "Tailwind CSS", "REST-API", "Vercel SDK", "Vitest"],
+            tech: ["Next.js", "TypeScript", "Tailwind CSS", "REST-API", "Vercel SDK", "Vitest"],
             link: "https://get-most.vercel.app/",
             github: "https://github.com/adityajha-coder/getMost",
             image: "/projects/getMost.png"
