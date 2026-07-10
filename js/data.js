@@ -116,15 +116,6 @@ export const portfolioData = {
             image: "/projects/attendora.png"
         },
         {
-            title: "SprintAPi",
-            category: "Resources Catelog",
-            description: "SprintAPI is a hand curated catalog built for developers who want to spend less time researching and more time building. It consolidates hundreds of production ready resources, categorized with precise details like authentication requirements, pricing rules, and utility workflows.",
-            tech: ["Next.js", "TypeScript", "Tailwind CSS", "JSON", "CDN"],
-            link: "https://sprintapi.vercel.app/",
-            github: "https://github.com/adityajha-coder/SprintAPi",
-            image: "/projects/sprintapi.png",
-        },
-        {
             title: "PokeDex",
             category: "Interactive Web App",
             description: "A comprehensive Pokémon encyclopedia covering over 1025 species across all 9 generations. Features include a Squad Analyzer that calculates Level 100 stats and evaluates team synergy, visual evolution chain tracking with precise requirements such as levels, items, and friendship, and a type matchup calculator for competitive play. The entire experience is delivered through a compact glassmorphic interface built on the App Router and Server Components architecture.",
@@ -132,6 +123,15 @@ export const portfolioData = {
             link: "https://pokedex-project-db.vercel.app",
             github: "https://github.com/adityajha-coder/PokeDex",
             image: "/projects/pokedex.png"
+        },
+        {
+            title: "SprintAPi",
+            category: "Resources Catelog",
+            description: "SprintAPI is a hand curated catalog built for developers who want to spend less time researching and more time building. It consolidates hundreds of production ready resources, categorized with precise details like authentication requirements, pricing rules, and utility workflows.",
+            tech: ["Next.js", "TypeScript", "Tailwind CSS", "JSON", "CDN"],
+            link: "https://sprintapi.vercel.app/",
+            github: "https://github.com/adityajha-coder/SprintAPi",
+            image: "/projects/sprintapi.png",
         },
         {
             title: "getMost",
