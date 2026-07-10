@@ -107,13 +107,13 @@ export const portfolioData = {
             image: "/projects/trivoxa.png"
         },
         {
-            title: "PokeDex",
-            category: "Interactive Web App",
-            description: "A comprehensive Pokémon encyclopedia covering over 1025 species across all 9 generations. Features include a Squad Analyzer that calculates Level 100 stats and evaluates team synergy, visual evolution chain tracking with precise requirements such as levels, items, and friendship, and a type matchup calculator for competitive play. The entire experience is delivered through a compact glassmorphic interface built on the App Router and Server Components architecture.",
-            tech: ["Next.js", "React", "Tailwind CSS", "Radix UI", "PokeAPI"],
-            link: "https://pokedex-project-db.vercel.app",
-            github: "https://github.com/adityajha-coder/PokeDex",
-            image: "/projects/pokedex.png"
+            title: "Attendora",
+            category: "EdTech Solution",
+            description: "A smart attendance tracking platform built for students. It includes an AI timetable scanner that can parse a photo of your schedule and automatically configure weekly classes. Other core features include predictive attendance goals, a bunk planner that calculates safe skip margins, an integrated GPA calculator, gamified achievements to keep users engaged, real time notification. All data stays synced across devices through Supabase.",
+            tech: ["JavaScript", "Supabase", "OpenRouter API", "PWA", "Docker"],
+            link: "https://attendora-sat.vercel.app/",
+            github: "https://github.com/adityajha-coder/Attendora-SAT",
+            image: "/projects/attendora.png"
         },
         {
             title: "SprintAPi",
@@ -125,13 +125,13 @@ export const portfolioData = {
             image: "/projects/sprintapi.png",
         },
         {
-            title: "Attendora",
-            category: "EdTech Solution",
-            description: "A smart attendance tracking platform built for students. It includes an AI timetable scanner that can parse a photo of your schedule and automatically configure weekly classes using Llama 3.2 Vision. Other core features include predictive attendance goals, a bunk planner that calculates safe skip margins, an integrated GPA calculator, gamified achievements to keep users engaged, and full CSV report exports. All data stays synced across devices through Firebase.",
-            tech: ["Vanilla JS", "Firebase", "OpenRouter AI", "PWA", "Chart.js"],
-            link: "https://attendora-sat.vercel.app/",
-            github: "https://github.com/adityajha-coder/Attendora-SAT",
-            image: "/projects/attendora.png"
+            title: "PokeDex",
+            category: "Interactive Web App",
+            description: "A comprehensive Pokémon encyclopedia covering over 1025 species across all 9 generations. Features include a Squad Analyzer that calculates Level 100 stats and evaluates team synergy, visual evolution chain tracking with precise requirements such as levels, items, and friendship, and a type matchup calculator for competitive play. The entire experience is delivered through a compact glassmorphic interface built on the App Router and Server Components architecture.",
+            tech: ["Next.js", "React", "Tailwind CSS", "Radix UI", "PokeAPI"],
+            link: "https://pokedex-project-db.vercel.app",
+            github: "https://github.com/adityajha-coder/PokeDex",
+            image: "/projects/pokedex.png"
         },
         {
             title: "getMost",
