@@ -1,7 +1,7 @@
 export function renderNav(data) {
     const navName = document.getElementById('nav-name');
     if (navName) {
-        navName.innerText = data.name.toUpperCase();
+        navName.innerText = data.name;
     }
 
     const menuToggle = document.getElementById('menu-toggle');

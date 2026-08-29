@@ -6,7 +6,7 @@ const ICON_MAP = {
 };
 
 const SOCIAL_HOVER_MAP = {
-    github: 'hover:bg-[#333] hover:text-white hover:border-[#24292e]',
+    github: 'hover:bg-[#222] hover:text-white hover:border-[#24292e]',
     linkedin: 'hover:bg-[#0077b5] hover:text-white hover:border-[#0077b5]',
     instagram: 'hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] hover:text-white hover:border-transparent',
     x: 'hover:bg-[#000000] hover:text-white hover:border-[#000000]'
@@ -15,7 +15,6 @@ const SOCIAL_HOVER_MAP = {
 export function renderContact(data) {
     const contactEmail = document.getElementById('contact-email');
     if (contactEmail) {
-        contactEmail.href = `mailto:${data.email}`;
         contactEmail.innerText = data.email;
     }
 
@@ -40,5 +39,39 @@ export function renderContact(data) {
         } else {
             socialContainer.innerHTML = '<p class="text-sm text-gray-500">No social links available.</p>';
         }
+    }
+
+    const copyBtn = document.getElementById('copy-email-btn');
+    if (copyBtn) {
+        copyBtn.addEventListener('click', async () => {
+            const email = data.email || 'developer.adityajha@gmail.com';
+            try {
+                await navigator.clipboard.writeText(email);
+                const copyText = document.getElementById('copy-text');
+                const copyIcon = document.getElementById('copy-icon');
+                if (copyText) copyText.innerText = 'Copied!';
+                if (copyIcon) {
+                    copyIcon.setAttribute('data-lucide', 'check');
+                    copyIcon.classList.remove('text-pink-400');
+                    copyIcon.classList.add('text-green-400');
+                }
+                if (window.lucide && typeof window.lucide.createIcons === 'function') {
+                    window.lucide.createIcons();
+                }
+                setTimeout(() => {
+                    if (copyText) copyText.innerText = 'Copy';
+                    if (copyIcon) {
+                        copyIcon.setAttribute('data-lucide', 'copy');
+                        copyIcon.classList.remove('text-green-400');
+                        copyIcon.classList.add('text-pink-400');
+                    }
+                    if (window.lucide && typeof window.lucide.createIcons === 'function') {
+                        window.lucide.createIcons();
+                    }
+                }, 2000);
+            } catch (err) {
+                console.error('Failed to copy email: ', err);
+            }
+        });
     }
 }

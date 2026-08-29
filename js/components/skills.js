@@ -17,9 +17,11 @@ export function renderSkills(skills) {
     for (const [key, label] of Object.entries(categories)) {
         if (skills[key]) {
             const categoryHtml = `
-                <div class="w-full mb-2">
-                    <h4 class="text-xs text-pink-400 font-bold uppercase tracking-widest mb-3 border-l-2 border-indigo-500 pl-3">${label}</h4>
-                    <div class="flex flex-wrap gap-3">
+                <div class="flex flex-col sm:flex-row sm:items-center gap-4 py-4 border-b border-white/5 last:border-0">
+                    <div class="sm:w-36 shrink-0">
+                        <h4 class="text-xs text-pink-400 font-bold uppercase tracking-widest border-l-2 border-indigo-500 pl-3">${label}</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-3 items-center">
                         ${skills[key].map(skill => {
                             const customIcon = CUSTOM_ICONS[skill.icon];
                             const iconContent = customIcon ? customIcon : `<i class="${skill.icon}"></i>`;

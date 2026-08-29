@@ -4,6 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aditya Jha | Portfolio</title>
+    <meta name="title" content="Aditya Jha | Full Stack Developer & Software Engineer" />
+    <meta name="description" content="Portfolio of Aditya Jha - Full Stack Developer specializing in Web Development, MERN stack, Next.js, AI integrations, and building scalable software solutions." />
+    <meta name="keywords" content="Aditya Jha, Full Stack Developer, Software Engineer, React, Next.js, Node.js, Web Developer Portfolio, MERN Developer, Golang" />
+    <meta name="author" content="Aditya Jha" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#050505" />
+
+    <!-- Open Graph / Facebook / LinkedIn / Discord -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Aditya Jha | Full Stack Developer & Software Engineer" />
+    <meta property="og:description" content="Explore full-stack web applications, open-source projects, and technical experience of Aditya Jha." />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Aditya Jha | Full Stack Developer & Software Engineer" />
+    <meta property="twitter:description" content="Explore full-stack web applications, open-source projects, and technical experience of Aditya Jha." />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Aditya Jha",
+      "jobTitle": "Full Stack Developer",
+      "sameAs": [
+        "https://github.com/adityajha-coder"
+      ],
+      "knowsAbout": ["Full Stack Web Development", "React", "Next.js", "Node.js", "Express", "MongoDB", "Golang", "TypeScript", "AI Integrations"]
+    }
+    </script>
+
+    <link rel="icon" type="image/png" href="/Pics/favicon-protfolio.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -12,7 +44,6 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="antialiased selection:bg-pink-500 selection:text-white">
@@ -23,10 +54,11 @@
       id="navbar"
     >
       <div
-        class="text-2xl font-bold tracking-tighter mix-blend-difference cursor-pointer hover:scale-105 transition-transform"
+        class="text-3xl font-bold tracking-normal mix-blend-difference cursor-pointer hover:scale-105 transition-transform font-satisfy"
         onclick="window.scrollTo(0, 0)"
       >
-        <span id="nav-name">ADITYA</span><span class="text-pink-500">.</span>
+        <span id="nav-name">Aditya Jha</span
+        ><span class="text-pink-500">.</span>
       </div>
 
       <!--Menu -->
@@ -53,11 +85,11 @@
           class="hover:text-white hover:text-pink-400 transition-colors"
           >Experience</a
         >
-        <a
+        <!-- <a
           href="#education"
           class="hover:text-white hover:text-pink-400 transition-colors"
           >Education</a
-        >
+        > -->
         <!-- <a
           href="#certifications"
           class="hover:text-white hover:text-pink-400 transition-colors"
@@ -92,8 +124,8 @@
         class="flex flex-col h-full bg-gradient-to-br from-indigo-950/20 to-black p-8"
       >
         <div class="flex justify-between items-center mb-12">
-          <div class="text-2xl font-bold tracking-tighter">
-            <span>ADITYA JHA</span><span class="text-pink-500">.</span>
+          <div class="text-3xl font-bold tracking-normal font-satisfy">
+            <span>Aditya Jha</span><span class="text-pink-500">.</span>
           </div>
           <button id="menu-close" class="text-white p-2 glass-panel rounded-lg">
             <i data-lucide="x"></i>
@@ -121,11 +153,11 @@
             class="mobile-link text-white hover:text-pink-400 transition-colors"
             >Experience</a
           >
-          <a
+          <!-- <a
             href="#education"
             class="mobile-link text-white hover:text-pink-400 transition-colors"
             >Education</a
-          >
+          > -->
           <!-- <a
             href="#certifications"
             class="mobile-link text-white hover:text-pink-400 transition-colors"
@@ -222,44 +254,23 @@
           ></div>
         </div>
 
-        <div class="flex flex-col md:flex-row gap-16 items-start w-full">
-          <div class="md:w-1/2 w-full">
-            <div>
-              <h3
-                class="text-xl font-bold mb-6 text-white border-b border-white/10 pb-2 inline-block"
-              >
-                Tech Stack
-              </h3>
-              <div
-                class="flex flex-wrap gap-x-4 gap-y-6"
-                id="skills-list"
-              ></div>
-            </div>
-
-            <div class="mt-10">
-              <h3
-                class="text-xl font-bold mb-6 text-white border-b border-white/10 pb-2 inline-block"
-              >
-                Non-Tech Skills
-              </h3>
-              <div class="flex flex-wrap gap-3" id="soft-skills-list"></div>
-            </div>
+        <div class="w-full max-w-5xl space-y-12">
+          <div>
+            <h3
+              class="text-xl font-bold mb-6 text-white border-b border-white/10 pb-2 inline-block"
+            >
+              Technologies I Work With
+            </h3>
+            <div class="space-y-6" id="skills-list"></div>
           </div>
 
-          <div
-            class="md:w-1/2 w-full h-[400px] glass-panel rounded-3xl p-1 relative group hover:scale-[1.02] transition-transform duration-500"
-          >
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-indigo-500/20 via-transparent to-pink-500/20 rounded-3xl"
-            ></div>
-            <div
-              class="w-full h-full rounded-2xl bg-black/40 flex items-center justify-center overflow-hidden relative border border-white/5"
+          <div>
+            <h3
+              class="text-xl font-bold mb-6 text-white border-b border-white/10 pb-2 inline-block"
             >
-              <div
-                class="absolute inset-0 flex flex-col justify-center p-8 font-mono text-xs md:text-sm text-green-400 opacity-80"
-                id="code-block"
-              ></div>
-            </div>
+              Off-Screen Skills
+            </h3>
+            <div class="flex flex-wrap gap-3" id="soft-skills-list"></div>
           </div>
         </div>
       </section>
@@ -269,7 +280,7 @@
         class="min-h-screen py-24 px-6 md:px-24 flex flex-col justify-center"
       >
         <div class="mb-12">
-          <h2 class="text-4xl md:text-6xl font-bold mb-4">My Work</h2>
+          <h2 class="text-4xl md:text-6xl font-bold mb-4">Work Showcase</h2>
           <div
             class="w-20 h-1 bg-gradient-to-r from-indigo-500 to-pink-500"
           ></div>
@@ -279,15 +290,6 @@
           id="project-grid"
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
         ></div>
-
-        <div
-          class="mt-12 p-6 glass-panel rounded-xl border border-white/5 text-center max-w-2xl mx-auto"
-        >
-          <p class="text-white text-sm">
-            I have developed several other projects that are currently in the
-            deployment pipeline. <br />Check back soon for more updates!
-          </p>
-        </div>
       </section>
 
       <section
@@ -303,11 +305,11 @@
 
         <div class="max-w-3xl relative pl-8 md:pl-0">
           <div class="timeline-line md:left-[-40px]"></div>
-          <div id="experience-list" class="space-y-12"></div>
+          <div id="experience-list" class="space-y-6"></div>
         </div>
       </section>
 
-      <section id="education" class="py-24 px-6 md:px-24">
+      <!-- <section id="education" class="py-24 px-6 md:px-24">
         <div class="mb-16">
           <h2 class="text-4xl md:text-5xl font-bold mb-4">Education</h2>
           <div
@@ -316,7 +318,7 @@
         </div>
 
         <div id="education-list" class="max-w-4xl space-y-8"></div>
-      </section>
+      </section> -->
 
       <!-- <section
         id="certifications"
@@ -345,27 +347,34 @@
 
         <div class="max-w-3xl">
           <h2 class="text-5xl md:text-7xl font-bold mb-8">
-            Let's create something
+            Let's build something
             <span class="text-pink-400">extraordinary</span>.
           </h2>
           <p class="text-xl text-white mb-12">
-            I am open to work. If you're looking for a dedicated developer to
-            collaborate on innovative solutions or freelance projects, let's
-            connect.
+            Open to new opportunities and freelance work. Drop me a message.
           </p>
 
           <div class="w-full max-w-lg">
             <div class="space-y-6">
-              <div class="glass-panel p-6 rounded-2xl border border-white/10">
-                <h4 class="text-white text-sm uppercase tracking-wider mb-2">
-                  Email
-                </h4>
-                <a
-                  id="contact-email"
-                  href="mailto:personal.adityajha@gmail.com"
-                  class="text-xl md:text-2xl font-bold text-white hover:text-pink-400 transition-colors break-words"
-                  >personal.adityajha@gmail.com</a
+              <div class="glass-panel p-6 rounded-2xl border border-white/10 flex items-center justify-between gap-4 flex-wrap">
+                <div class="min-w-0 flex-1">
+                  <h4 class="text-white text-xs uppercase tracking-wider mb-1 opacity-70">
+                    Email
+                  </h4>
+                  <span
+                    id="contact-email"
+                    class="text-lg md:text-xl font-bold text-white break-all select-all"
+                    >developer.adityajha@gmail.com</span
+                  >
+                </div>
+                <button
+                  id="copy-email-btn"
+                  class="px-4 py-2.5 bg-white/5 hover:bg-white/10 text-white rounded-xl border border-white/10 transition-all text-xs font-semibold flex items-center gap-2 shrink-0 active:scale-95 cursor-pointer"
+                  title="Copy email address"
                 >
+                  <i data-lucide="copy" id="copy-icon" class="w-4 h-4 text-pink-400"></i>
+                  <span id="copy-text">Copy</span>
+                </button>
               </div>
 
               <div class="glass-panel p-6 rounded-2xl border border-white/10">
@@ -388,7 +397,6 @@
       </footer>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="js/main.js"></script>
     <script type="module" src="js/three-bg.js"></script>
   </body>
