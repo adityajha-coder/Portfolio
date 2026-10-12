@@ -27,7 +27,7 @@ export function renderSkills(skills) {
                             const iconContent = customIcon ? customIcon : `<i class="${skill.icon}"></i>`;
                             return `
                                 <div class="flex flex-col items-center gap-1 group tech-icon transition-transform duration-300 cursor-default">
-                                    <div class="w-10 h-10 glass-panel rounded-lg flex items-center justify-center text-2xl border border-white/5 group-hover:border-pink-500/30">
+                                    <div class="w-10 h-10 tech-icon-box rounded-lg flex items-center justify-center text-2xl">
                                         ${iconContent}
                                     </div>
                                     <span class="text-[10px] text-gray-400 group-hover:text-pink-400 opacity-0 group-hover:opacity-100 transition-opacity">${skill.name}</span>

@@ -10,7 +10,7 @@ export function renderExperience(experiences) {
         const item = `
             <div class="relative group">
                 <div class="hidden md:block absolute left-[-45px] top-4 w-3 h-3 bg-pink-500 rounded-full border-4 border-[#050505] shadow-[0_0_10px_rgba(236,72,153,0.5)] z-10 group-hover:scale-150 transition-transform"></div>
-                <div class="glass-panel p-5 md:p-6 rounded-xl hover:bg-white/5 transition-colors border border-white/5 flex flex-col md:flex-row gap-4">
+                <div class="bg-white/5 backdrop-blur-md p-5 md:p-6 rounded-xl hover:bg-white/10 transition-colors border border-white/10 flex flex-col md:flex-row gap-4">
                     ${logoHtml}
                     <div>
                         <span class="text-xs text-pink-400 font-mono mb-1 block">${exp.year}</span>

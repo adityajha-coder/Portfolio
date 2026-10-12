@@ -1,6 +1,6 @@
 export const portfolioData = {
     name: "Aditya Jha",
-    role: "Full Stack Developer",
+    role: "Full Stack // Backend // AI",
     heroHeadline: ["Building", "Full Stack", "Solutions."],
     shortBio: "Hi, I'm Aditya Jha, a Full Stack MERN Developer who loves thinking of new ideas and turning them into reality through code.",
     email: "developer.adityajha@gmail.com",
@@ -56,11 +56,7 @@ export const portfolioData = {
             { name: "REST API", icon: "devicon-swagger-plain colored" },
             { name: "MongoDB", icon: "devicon-mongodb-plain colored" },
             {name: "PostgreSQL", icon: "devicon-postgresql-plain colored"},
-            { name: "Firebase", icon: "devicon-firebase-plain colored" },
-            {name: "Supabase", icon: "devicon-supabase-plain colored"},
-        ],
-        database: [
-            { name: "MongoDB", icon: "devicon-mongodb-plain colored" },
+            {name:"Redis", icon: "devicon-redis-plain colored"},
             { name: "Firebase", icon: "devicon-firebase-plain colored" },
             {name: "Supabase", icon: "devicon-supabase-plain colored"},
         ],
@@ -109,6 +105,24 @@ export const portfolioData = {
             image: "/projects/trivoxa.png"
         },
         {
+            title: "AuthORS",
+            category: "Auth & Security",
+            description: "A secure authentication backend boilerplate built across multiple tier security releases. Made using Node.js, Express, MongoDB, Argon2id, RFC 6238 TOTP 2FA, RFC 6819 Token Theft Detection, AES-256-GCM Cryptography, Zod, Helmet, Express-Rate-Limit, Passport (Google & GitHub OAuth), JWT, and Nodemailer (Google OAuth2).",
+            tech: ["Node.js", "Express", "MongoDB", "Argon2id", "Nodemailer"],
+            link: "https://github.com/adityajha-coder/AuthORS",
+            github: "https://github.com/adityajha-coder/AuthORS",
+            image: "/projects/authors.png"
+        },
+        {
+            title: "SprintAPi",
+            category: "Resources Catelog",
+            description: "SprintAPI is a hand curated catalog built for developers who want to spend less time researching and more time building. It consolidates hundreds of production ready resources, categorized with precise details like authentication requirements, pricing rules, and utility workflows.",
+            tech: ["Next.js", "TypeScript", "Tailwind CSS", "JSON", "CDN"],
+            link: "https://sprintapi.vercel.app/",
+            github: "https://github.com/adityajha-coder/SprintAPi",
+            image: "/projects/sprintapi.png",
+        },
+        {
             title: "Attendora",
             category: "EdTech Solution",
             description: "A smart attendance tracking platform built for students. It includes an AI timetable scanner that can parse a photo of your schedule and automatically configure weekly classes. Other core features include predictive attendance goals, a bunk planner that calculates safe skip margins, an integrated GPA calculator, gamified achievements to keep users engaged, real time notification. All data stays synced across devices through Supabase.",
@@ -125,33 +139,6 @@ export const portfolioData = {
             link: "https://pokedex-project-db.vercel.app",
             github: "https://github.com/adityajha-coder/PokeDex",
             image: "/projects/pokedex.png"
-        },
-        {
-            title: "SprintAPi",
-            category: "Resources Catelog",
-            description: "SprintAPI is a hand curated catalog built for developers who want to spend less time researching and more time building. It consolidates hundreds of production ready resources, categorized with precise details like authentication requirements, pricing rules, and utility workflows.",
-            tech: ["Next.js", "TypeScript", "Tailwind CSS", "JSON", "CDN"],
-            link: "https://sprintapi.vercel.app/",
-            github: "https://github.com/adityajha-coder/SprintAPi",
-            image: "/projects/sprintapi.png",
-        },
-        {
-            title: "YouTube-Backend",
-            category: "Social Media",
-            description: "A backend for a YouTube-like platform that includes features like video uploading, playlists, like & comment, watch history, and subscriptions.",
-            tech: ["Node.js", "Express", "MongoDB", "Multer", "Cloudinary", "JWT"],
-            link: "https://github.com/adityajha-coder/youtube-backend",
-            github: "https://github.com/adityajha-coder/youtube-backend",
-            image: "/projects/youtube-backend.png"
-        },
-        {
-            title: "getMost",
-            category: "Analyzer",
-            description: "getMost evaluates software engineering candidates by analyzing their public contributions on GitHub and LeetCode. The tool calibrates repository activity, language familiarity, coding consistency, and algorithmic skills against configurable baselines for various engineering roles. It generates a diagnostic dashboard and a structured skill development roadmap using LLM analysis.",
-            tech: ["Next.js", "TypeScript", "Tailwind CSS", "REST-API", "Vercel SDK", "Vitest"],
-            link: "https://get-most.vercel.app/",
-            github: "https://github.com/adityajha-coder/getMost",
-            image: "/projects/getMost.png"
         },
         
     ],
