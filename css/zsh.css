@@ -1,0 +1,319 @@
+/*Linux-Zsh*/
+/*Terminal Selector*/
+.cyber-selector-box {
+    background-color: #0b0d1a;
+    border: 2px solid #8b5cf6;
+    border-radius: 20px;
+    box-shadow: 0 0 35px rgba(139, 92, 246, 0.4), 0 25px 70px -10px rgba(0, 0, 0, 0.95);
+    font-family: 'Consolas', 'Fira Code', 'Cascadia Code', 'Courier New', monospace;
+}
+
+.cyber-selector-box button {
+    outline: none !important;
+}
+
+.cyber-selector-box button:focus,
+.cyber-selector-box button:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.cyber-option-card {
+    transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+    outline: none !important;
+}
+
+.cyber-option-card:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.cyber-option-card:active {
+    transform: scale(0.985);
+}
+
+/* Linux Zsh Window */
+.zsh-window {
+    background-color: #0d1117;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(255, 255, 255, 0.08);
+    font-family: 'Consolas', 'Cascadia Code', 'Fira Code', 'Courier New', monospace;
+    color: #e6edf3;
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+}
+
+.zsh-window-maximized {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    max-width: none !important;
+    height: 100vh !important;
+    max-height: none !important;
+    border-radius: 0 !important;
+    border: none !important;
+    z-index: 110 !important;
+}
+
+/* Traffic Lights Title Bar */
+.zsh-title-bar {
+    height: 38px;
+    min-height: 38px;
+    background: #161b22;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 14px;
+    user-select: none;
+    cursor: default;
+}
+
+.zsh-traffic-lights {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 60px;
+}
+
+.zsh-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0;
+    transition: filter 0.15s ease, transform 0.15s ease;
+}
+
+.zsh-dot:hover {
+    filter: brightness(1.2);
+    transform: scale(1.08);
+}
+
+.zsh-dot-red {
+    background-color: #ff5f56;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.zsh-dot-yellow {
+    background-color: #ffbd2e;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.zsh-dot-green {
+    background-color: #27c93f;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.zsh-title-center {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #8b949e;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.zsh-title-text {
+    font-family: 'Consolas', monospace;
+    color: #c9d1d9;
+}
+
+.zsh-title-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 60px;
+}
+
+/* Linux Zsh Body */
+.zsh-body {
+    flex: 1;
+    padding: 16px 20px 24px 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: #e6edf3;
+    cursor: text;
+}
+
+.zsh-body::-webkit-scrollbar {
+    width: 10px;
+}
+
+.zsh-body::-webkit-scrollbar-track {
+    background: #0d1117;
+}
+
+.zsh-body::-webkit-scrollbar-thumb {
+    background: #21262d;
+    border-radius: 4px;
+    border: 2px solid #0d1117;
+}
+
+.zsh-body::-webkit-scrollbar-thumb:hover {
+    background: #30363d;
+}
+
+/* Linux Zsh Content Styles */
+.zsh-banner {
+    margin-bottom: 14px;
+    color: #8b949e;
+    font-size: 12.5px;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.zsh-line-entry {
+    display: flex;
+    align-items: baseline;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.zsh-section {
+    margin: 8px 0;
+    line-height: 1.55;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.zsh-col-cmd {
+    display: inline-block;
+    width: 130px;
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+.zsh-col-cat {
+    display: inline-block;
+    width: 130px;
+    font-weight: 600;
+}
+
+.zsh-text-emerald {
+    color: #10b981;
+}
+
+.zsh-text-cyan {
+    color: #38bdf8;
+}
+
+.zsh-text-yellow {
+    color: #fbbf24;
+}
+
+.zsh-link {
+    color: #58a6ff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.15s ease;
+}
+
+.zsh-link:hover {
+    color: #79c0ff;
+}
+
+.zsh-pre {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 10px;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 12px;
+    overflow-x: auto;
+    color: #c9d1d9;
+    margin: 6px 0;
+}
+
+/* Prompt Line in Zsh */
+.zsh-prompt-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-top: 8px;
+    position: relative;
+}
+
+.zsh-prompt-label {
+    white-space: nowrap;
+    user-select: none;
+    font-size: 13.5px;
+}
+
+.zsh-input-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-width: 0;
+}
+
+.zsh-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    padding: 0;
+    margin: 0;
+    caret-color: #10b981;
+    box-shadow: none !important;
+}
+
+/* Terminal Palette Color Blocks (Green Matrix) */
+.terminal-color-block {
+    display: inline-block;
+    width: 22px;
+    height: 16px;
+    border-radius: 2px;
+    background-image: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.28) 0px,
+        rgba(0, 0, 0, 0.28) 1px,
+        transparent 1px,
+        transparent 4px
+    );
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.zsh-neofetch-grid {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.zsh-neofetch-logo {
+    margin: 0;
+}
+
+.zsh-neofetch-info {
+    font-size: 12.5px;
+    line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+    .zsh-body {
+        padding: 12px 14px;
+        font-size: 12px;
+    }
+
+    .zsh-col-cmd, .zsh-col-cat {
+        width: 95px;
+    }
+
+    .terminal-color-block {
+        width: 17px;
+        height: 14px;
+    }
+
+    .zsh-neofetch-grid {
+        gap: 12px;
+    }
+}

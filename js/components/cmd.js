@@ -1,4 +1,9 @@
-// cmd.js - Windows Command Prompt Component for Aditya Jha Portfolio
+
+let openZshRef = null;
+
+export function setOpenZshCallback(fn) {
+    openZshRef = fn;
+}
 
 export function initCmd(data) {
     const cmdModal = document.getElementById('cmd-modal');
@@ -8,7 +13,11 @@ export function initCmd(data) {
     const cmdOutput = document.getElementById('cmd-output');
     const cmdInput = document.getElementById('cmd-input');
     const cmdToggleBtn = document.getElementById('cmd-toggle-btn');
-    const mobileCmdBtn = document.getElementById('mobile-cmd-btn');
+    const terminalSelectorModal = document.getElementById('terminal-selector-modal');
+    const terminalSelectorBox = document.getElementById('terminal-selector-box');
+    const closeSelectorBtn = document.getElementById('close-terminal-selector');
+    const selectWindowsBtn = document.getElementById('select-windows-cmd');
+    const mobileWindowsBtn = document.getElementById('mobile-windows-btn');
     const cmdCloseBtn = document.getElementById('cmd-close-btn');
     const cmdMinimizeBtn = document.getElementById('cmd-minimize-btn');
     const cmdMaximizeBtn = document.getElementById('cmd-maximize-btn');
@@ -16,7 +25,7 @@ export function initCmd(data) {
 
     if (!cmdModal || !cmdInput || !cmdOutput) {
         console.warn('CMD elements missing from DOM');
-        return;
+        return { openCmd: () => {}, closeCmd: () => {} };
     }
 
     let isOpen = false;
@@ -24,7 +33,7 @@ export function initCmd(data) {
     const history = [];
     let historyIndex = -1;
 
-    // Available commands for auto-complete and help
+    // cmds
     const COMMANDS = [
         'help',
         'about',
@@ -43,9 +52,12 @@ export function initCmd(data) {
         'color',
         'gui',
         'whoami',
+        'switch',
         'date',
         'time',
         'echo',
+        'fastfetch',
+        'neofetch',
         'exit'
     ];
 
@@ -78,7 +90,8 @@ export function initCmd(data) {
         cmdWindow.classList.remove('scale-95');
         cmdWindow.classList.add('scale-100');
 
-        // Close mobile drawer if open
+        closeSelector();
+
         const mobileMenu = document.getElementById('mobile-menu');
         if (mobileMenu && !mobileMenu.classList.contains('translate-x-full')) {
             mobileMenu.classList.add('translate-x-full');
@@ -116,7 +129,6 @@ export function initCmd(data) {
         } else {
             cmdWindow.classList.remove('cmd-window-maximized');
             if (cmdMaximizeIcon) {
-                // Maximize square icon
                 cmdMaximizeIcon.innerHTML = '&#x25A2;';
             }
         }
@@ -137,10 +149,11 @@ Microsoft Windows [Version 10.0.22631.3007]
 (c) Microsoft Corporation. All rights reserved.
 
 <span class="cmd-text-bright">C:\\Users\\Aditya&gt; portfolio.exe --interactive</span>
-================================================================================
+
  <span class="cmd-text-cyan">${escapeHtml(data.name).toUpperCase()}</span> - COMMAND PROMPT
-================================================================================
+
 Type '<span class="cmd-text-yellow">help</span>' to view all available commands.
+Type '<span class="cmd-text-cyan">fastfetch</span>' for system info.
 Type '<span class="cmd-text-yellow">exit</span>' or press <span class="cmd-text-yellow">ESC</span> to close this terminal.
 </div>`;
         cmdOutput.innerHTML = bannerHtml;
@@ -159,15 +172,12 @@ Type '<span class="cmd-text-yellow">exit</span>' or press <span class="cmd-text-
         scrollToBottom();
     }
 
-    // -------------------------------------------------------------
-    // Command Handlers
-    // -------------------------------------------------------------
+   // cmd handlers
 
     function handleHelp() {
         return `
 <div class="cmd-section">
 <div class="cmd-title-header">AVAILABLE COMMAND PROMPTS</div>
---------------------------------------------------------------------------------
 <span class="cmd-col-cmd">about</span>          Know about Aditya
 <span class="cmd-col-cmd">skills</span>         Technical skills 
 <span class="cmd-col-cmd">projects</span>       List all featured projects
@@ -177,17 +187,18 @@ Type '<span class="cmd-text-yellow">exit</span>' or press <span class="cmd-text-
 <span class="cmd-col-cmd">contact</span>        Direct email & collaboration details
 <span class="cmd-col-cmd">socials</span>        GitHub, LinkedIn, Instagram, and X profiles
 <span class="cmd-col-cmd">resume</span>         Resume details and credentials
---------------------------------------------------------------------------------
+
+<span class="cmd-col-cmd">fastfetch</span>      Display Windows system specs &amp; hardware stats
 <span class="cmd-col-cmd">dir</span>            List virtual directory contents of C:\\Users\\Aditya\\Portfolio
 <span class="cmd-col-cmd">type &lt;file&gt;</span>     Display contents of a file (e.g. <span class="cmd-text-yellow">type about.txt</span>)
 <span class="cmd-col-cmd">color &lt;attr&gt;</span>    Change console color (e.g. <span class="cmd-text-yellow">color 0a</span> for Matrix, <span class="cmd-text-yellow">color 0b</span>, <span class="cmd-text-yellow">color 07</span>)
 <span class="cmd-col-cmd">gui &lt;section&gt;</span>  Scroll site to section (<span class="cmd-text-yellow">gui work</span>, <span class="cmd-text-yellow">gui about</span>, <span class="cmd-text-yellow">gui contact</span>)
 <span class="cmd-col-cmd">cls / clear</span>    Clear screen
 <span class="cmd-col-cmd">whoami</span>         Display current session user info
+<span class="cmd-col-cmd">switch</span>         switch to linux
 <span class="cmd-col-cmd">date / time</span>    Print current system date & time
 <span class="cmd-col-cmd">echo &lt;text&gt;</span>    Print text to the console
 <span class="cmd-col-cmd">exit</span>           Close the command prompt
---------------------------------------------------------------------------------
 <span class="cmd-text-dim">Tip: Use UP/DOWN arrow keys for history, TAB for autocompletion.</span>
 </div>`;
     }
@@ -243,14 +254,13 @@ Type '<span class="cmd-text-yellow">exit</span>' or press <span class="cmd-text-
 
         return `
 <div class="cmd-section">
-<div class="cmd-title-header">TECHNICAL SKILL INVENTORY</div>
---------------------------------------------------------------------------------
+<div class="cmd-title-header">TECHNICAL SKILL</div>
 <span class="cmd-col-cat">[LANGUAGES]</span>    ${escapeHtml(languages)}
 <span class="cmd-col-cat">[FRONTEND]</span>     ${escapeHtml(frontend)}
 <span class="cmd-col-cat">[BACKEND]</span>      ${escapeHtml(backend)}
 <span class="cmd-col-cat">[TOOLS &amp; OPS]</span>  ${escapeHtml(tools)}
 <span class="cmd-col-cat">[SOFT SKILLS]</span>  ${escapeHtml(softSkills)}
---------------------------------------------------------------------------------
+
 <span class="cmd-text-dim">Total Technologies Tracked: ${(s.languages || []).length + (s.frontend || []).length + (s.backend || []).length + (s.tools || []).length}</span>
 </div>`;
     }
@@ -260,7 +270,7 @@ Type '<span class="cmd-text-yellow">exit</span>' or press <span class="cmd-text-
         let html = `
 <div class="cmd-section">
 <div class="cmd-title-header">FEATURED PROJECTS (Total: ${projs.length})</div>
---------------------------------------------------------------------------------`;
+`;
 
         projs.forEach((p, idx) => {
             const techStr = (p.tech || []).join(' | ');
@@ -274,7 +284,6 @@ Type '<span class="cmd-text-yellow">exit</span>' or press <span class="cmd-text-
         });
 
         html += `
---------------------------------------------------------------------------------
 <span class="cmd-text-dim">Tip: Type '<span class="cmd-text-yellow">project &lt;name&gt;</span>' (e.g. '<span class="cmd-text-yellow">project trivoxa</span>') for details.</span>
 </div>`;
         return html;
@@ -310,7 +319,7 @@ Type '<span class="cmd-text-yellow">exit</span>' or press <span class="cmd-text-
         let html = `
 <div class="cmd-section">
 <div class="cmd-title-header">WORK EXPERIENCE &amp; CONTRIBUTIONS</div>
---------------------------------------------------------------------------------`;
+`;
 
         exp.forEach(e => {
             html += `
@@ -319,7 +328,7 @@ Type '<span class="cmd-text-yellow">exit</span>' or press <span class="cmd-text-
 <br/>`;
         });
 
-        html += `--------------------------------------------------------------------------------</div>`;
+        html += `</div>`;
         return html;
     }
 
@@ -328,7 +337,7 @@ Type '<span class="cmd-text-yellow">exit</span>' or press <span class="cmd-text-
         let html = `
 <div class="cmd-section">
 <div class="cmd-title-header">ACADEMIC BACKGROUND</div>
---------------------------------------------------------------------------------`;
+`;
 
         edu.forEach(item => {
             html += `
@@ -339,7 +348,7 @@ Type '<span class="cmd-text-yellow">exit</span>' or press <span class="cmd-text-
 <br/>`;
         });
 
-        html += `--------------------------------------------------------------------------------</div>`;
+        html += `</div>`;
         return html;
     }
 
@@ -347,13 +356,10 @@ Type '<span class="cmd-text-yellow">exit</span>' or press <span class="cmd-text-
         return `
 <div class="cmd-section">
 <div class="cmd-title-header">CONTACT INFORMATION</div>
---------------------------------------------------------------------------------
 <span class="cmd-text-dim">Name:</span>       ${escapeHtml(data.name)}
 <span class="cmd-text-dim">Role:</span>       ${escapeHtml(data.role)}
 <span class="cmd-text-dim">Email:</span>      <a href="mailto:${data.email}" class="cmd-link">${escapeHtml(data.email)}</a>
 <span class="cmd-text-dim">Status:</span>     Open to collaboration, software roles &amp; freelance opportunities.
---------------------------------------------------------------------------------
-<span class="cmd-text-dim">Send an email directly by clicking the link above, or use the website contact form.</span>
 </div>`;
     }
 
@@ -362,14 +368,14 @@ Type '<span class="cmd-text-yellow">exit</span>' or press <span class="cmd-text-
         let html = `
 <div class="cmd-section">
 <div class="cmd-title-header">ONLINE PROFILES &amp; SOCIALS</div>
---------------------------------------------------------------------------------`;
+`;
 
         socials.forEach(s => {
             html += `
 <div class="cmd-line"><span class="cmd-col-cmd">${escapeHtml(s.name)}</span> <a href="${s.url}" target="_blank" class="cmd-link">${escapeHtml(s.url)}</a></div>`;
         });
 
-        html += `--------------------------------------------------------------------------------</div>`;
+        html += `</div>`;
         return html;
     }
 
@@ -512,9 +518,7 @@ Example: color 0a (Matrix style) or color reset
         return (d.education || []).map(e => `${e.institution} (${e.year})\nDegree: ${e.degree}\nAffiliation: ${e.affiliation}`).join('\n\n');
     }
 
-    // -------------------------------------------------------------
-    // Execute Command Router
-    // -------------------------------------------------------------
+    // cmd routers
 
     function execute(rawCmd) {
         const trimmed = rawCmd.trim();
@@ -604,13 +608,11 @@ Example: color 0a (Matrix style) or color reset
                 responseHtml = `
 <div class="cmd-section">
 <div class="cmd-title-header">RESUME &amp; CREDENTIALS</div>
---------------------------------------------------------------------------------
 Aditya Jha - Full Stack // Backend // AI Developer
 Current Resume is available upon direct request.
 Contact: <a href="mailto:${data.email}" class="cmd-link">${data.email}</a>
 GitHub:  <a href="https://github.com/adityajha-coder" target="_blank" class="cmd-link">https://github.com/adityajha-coder</a>
 LinkedIn:<a href="https://www.linkedin.com/in/aditya-jha-8534a1305/" target="_blank" class="cmd-link">https://www.linkedin.com/in/aditya-jha-8534a1305/</a>
---------------------------------------------------------------------------------
 </div>`;
                 break;
 
@@ -659,48 +661,31 @@ LinkedIn:<a href="https://www.linkedin.com/in/aditya-jha-8534a1305/" target="_bl
                 closeCmd();
                 return;
 
-            // Authentic easter eggs / commands
-            case 'sudo':
-                responseHtml = `<div class="cmd-error">aditya is not in the sudoers file. This incident will be reported to C:\\WINDOWS\\System32\\security.log.</div>`;
-                break;
-
-            case 'ver':
-                responseHtml = `<div class="cmd-line">Microsoft Windows [Version 10.0.22631.3007]</div>`;
-                break;
-
-            case 'ipconfig':
-                responseHtml = `
-<div class="cmd-section">
-Windows IP Configuration
-
-Ethernet adapter vEthernet (WSL):
-   Connection-specific DNS Suffix  . :
-   IPv4 Address. . . . . . . . . . . : 172.28.16.1
-   Subnet Mask . . . . . . . . . . . : 255.255.240.0
-   Default Gateway . . . . . . . . . :
-</div>`;
-                break;
-
-            case 'ping':
-                const host = argStr || 'portfolio.adityajha.dev';
-                responseHtml = `
-<div class="cmd-section">
-Pinging ${escapeHtml(host)} [127.0.0.1] with 32 bytes of data:
-Reply from 127.0.0.1: bytes=32 time&lt;1ms TTL=128
-Reply from 127.0.0.1: bytes=32 time&lt;1ms TTL=128
-Reply from 127.0.0.1: bytes=32 time&lt;1ms TTL=128
-Reply from 127.0.0.1: bytes=32 time&lt;1ms TTL=128
-
-Ping statistics for 127.0.0.1:
-    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
-Approximate round trip times in milli-seconds:
-    Minimum = 0ms, Maximum = 0ms, Average = 0ms
-</div>`;
+            case 'switch':
+            case 'zsh':
+            case 'linux':
+                if (cmd === 'zsh' || cmd === 'linux' || argStr.toLowerCase() === 'linux' || argStr.toLowerCase() === 'zsh') {
+                    closeCmd();
+                    if (openZshRef) openZshRef();
+                    return;
+                }
+                responseHtml = `<div class="cmd-line">Usage: switch linux (switches environment to Linux Zsh on adzyy OS)</div>`;
                 break;
 
             case 'matrix':
                 handleColor('0a');
                 responseHtml = `<div class="cmd-line cmd-text-green">Wake up, Neo... The Matrix has you. (Theme set to Matrix green)</div>`;
+                break;
+
+            case 'switch':
+            case 'linux':
+            case 'zsh':
+                closeCmd();
+                if (openZshRef) openZshRef();
+                return;
+
+            case 'fastfetch':
+                responseHtml = handleFastfetchCmd();
                 break;
 
             default:
@@ -711,9 +696,42 @@ Approximate round trip times in milli-seconds:
         appendOutput(responseHtml);
     }
 
-    // -------------------------------------------------------------
-    // Event Listeners
-    // -------------------------------------------------------------
+    function handleFastfetchCmd() {
+        return `
+<div class="cmd-neofetch-container flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 my-2">
+  <div class="zsh-neofetch-art-wrapper shrink-0">
+    <img
+      src="/Pics/portrait_ascii_art.png"
+      alt="${escapeHtml(data.name)} ASCII Art"
+      class="zsh-neofetch-art w-44 sm:w-52 h-auto select-none rounded-md"
+      onerror="this.src='/pics/portrait_ascii_art.png'"
+    />
+  </div>
+  <div class="cmd-neofetch-info flex-1 min-w-0 font-mono text-xs sm:text-sm">
+    <div class="cmd-text-bright font-bold text-sm sm:text-base">Aditya<span class="cmd-text-cyan">@</span>WINDOWS-PORTFOLIO</div>
+    <div class="text-gray-500 text-xs my-0.5"></div>
+    <div><span class="cmd-text-cyan font-semibold">User:</span> ${escapeHtml(data.name)}</div>
+    <div><span class="cmd-text-cyan font-semibold">OS:</span> Windows 11 Pro </div>
+    <div><span class="cmd-text-cyan font-semibold">Host:</span> Aditya Jha </div>
+    <div><span class="cmd-text-cyan font-semibold">Kernel:</span> Windows Caffeine-Fueled Event Loop</div>
+    <div><span class="cmd-text-cyan font-semibold">Shell:</span> cmd.exe 10.0.22631</div>
+    <div><span class="cmd-text-cyan font-semibold">Terminal:</span> Windows Terminal // Console</div>
+    <div><span class="cmd-text-cyan font-semibold">CPU:</span> Intel Core Problem Solving @ 4.8GHz</div>
+    <div><span class="cmd-text-cyan font-semibold">Memory:</span> 4096MB / 32768MB</div>
+    <div><span class="cmd-text-cyan font-semibold">Role:</span> ${escapeHtml(data.role)}</div>
+    <div class="mt-3 flex items-center gap-1.5">
+      <span class="terminal-color-block" style="background-color: #003f0f;"></span>
+      <span class="terminal-color-block" style="background-color: #0a6c1f;"></span>
+      <span class="terminal-color-block" style="background-color: #1f9f3a;"></span>
+      <span class="terminal-color-block" style="background-color: #33ff65;"></span>
+      <span class="terminal-color-block" style="background-color: #7de899;"></span>
+      <span class="terminal-color-block" style="background-color: #00ff40;"></span>
+      <span class="terminal-color-block" style="background-color: #c6ffd7;"></span>
+      <span class="terminal-color-block" style="background-color: #ffffff;"></span>
+    </div>
+  </div>
+</div>`;
+    }
 
     // Input Key Handling
     cmdInput.addEventListener('keydown', (e) => {
@@ -768,21 +786,72 @@ Approximate round trip times in milli-seconds:
         }
     });
 
-    // Button Triggers
+    function openSelector() {
+        if (!terminalSelectorModal) return;
+        terminalSelectorModal.classList.remove('opacity-0', 'pointer-events-none');
+        terminalSelectorModal.classList.add('opacity-100', 'pointer-events-auto');
+        if (terminalSelectorBox) {
+            terminalSelectorBox.classList.remove('scale-95');
+            terminalSelectorBox.classList.add('scale-100');
+        }
+    }
+
+    function closeSelector() {
+        if (!terminalSelectorModal) return;
+        terminalSelectorModal.classList.remove('opacity-100', 'pointer-events-auto');
+        terminalSelectorModal.classList.add('opacity-0', 'pointer-events-none');
+        if (terminalSelectorBox) {
+            terminalSelectorBox.classList.remove('scale-100');
+            terminalSelectorBox.classList.add('scale-95');
+        }
+    }
+
+    // Open selector modal when header button is clicked
     if (cmdToggleBtn) {
         cmdToggleBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            if (isOpen) {
-                closeCmd();
-            } else {
-                openCmd();
+            e.stopPropagation();
+            openSelector();
+        });
+    }
+
+    if (closeSelectorBtn) {
+        closeSelectorBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            closeSelector();
+        });
+    }
+
+    // Close selector when clicking modal backdrop
+    if (terminalSelectorModal) {
+        terminalSelectorModal.addEventListener('click', (e) => {
+            if (e.target === terminalSelectorModal) {
+                closeSelector();
             }
         });
     }
 
-    if (mobileCmdBtn) {
-        mobileCmdBtn.addEventListener('click', (e) => {
+    if (selectWindowsBtn) {
+        selectWindowsBtn.addEventListener('click', (e) => {
             e.preventDefault();
+            closeSelector();
+            openCmd();
+        });
+    }
+
+    const selectLinuxBtn = document.getElementById('select-linux-zsh');
+    if (selectLinuxBtn) {
+        selectLinuxBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            closeSelector();
+            if (openZshRef) openZshRef();
+        });
+    }
+
+    if (mobileWindowsBtn) {
+        mobileWindowsBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            closeSelector();
             openCmd();
         });
     }
@@ -806,8 +875,20 @@ Approximate round trip times in milli-seconds:
         }
     });
 
-    // Global keyboard shortcut: Backtick / Tilde (`) to toggle CMD
+    //esc shortcut
     document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            if (terminalSelectorModal && !terminalSelectorModal.classList.contains('opacity-0')) {
+                e.preventDefault();
+                closeSelector();
+                return;
+            }
+            if (isOpen) {
+                closeCmd();
+            }
+            return;
+        }
+
         // Toggle with backtick ` (unless typing inside another input/textarea)
         if (e.key === '`' || e.key === '~') {
             const activeTag = document.activeElement ? document.activeElement.tagName.toLowerCase() : '';
@@ -816,11 +897,16 @@ Approximate round trip times in milli-seconds:
                 if (isOpen) {
                     closeCmd();
                 } else {
-                    openCmd();
+                    openSelector();
                 }
             }
-        } else if (e.key === 'Escape' && isOpen) {
-            closeCmd();
         }
     });
+
+    return {
+        openCmd,
+        closeCmd,
+        openSelector,
+        closeSelector
+    };
 }
