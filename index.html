@@ -4,35 +4,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aditya Jha | Portfolio</title>
-    <meta name="title" content="Aditya Jha | Full Stack Developer & Software Engineer" />
-    <meta name="description" content="Portfolio of Aditya Jha - Full Stack Developer specializing in Web Development, MERN stack, Next.js, AI integrations, and building scalable software solutions." />
-    <meta name="keywords" content="Aditya Jha, Full Stack Developer, Software Engineer, React, Next.js, Node.js, Web Developer Portfolio, MERN Developer, Golang" />
+    <meta
+      name="title"
+      content="Aditya Jha | Full Stack Developer & Software Engineer"
+    />
+    <meta
+      name="description"
+      content="Portfolio of Aditya Jha - Full Stack Developer specializing in Web Development, MERN stack, Next.js, AI integrations, and building scalable software solutions."
+    />
+    <meta
+      name="keywords"
+      content="Aditya Jha, Full Stack Developer, Software Engineer, React, Next.js, Node.js, Web Developer Portfolio, MERN Developer, Golang"
+    />
     <meta name="author" content="Aditya Jha" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#050505" />
 
     <!-- Open Graph / Facebook / LinkedIn / Discord -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Aditya Jha | Full Stack Developer & Software Engineer" />
-    <meta property="og:description" content="Explore full-stack web applications, open-source projects, and technical experience of Aditya Jha." />
+    <meta
+      property="og:title"
+      content="Aditya Jha | Full Stack Developer & Software Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Explore full-stack web applications, open-source projects, and technical experience of Aditya Jha."
+    />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="Aditya Jha | Full Stack Developer & Software Engineer" />
-    <meta property="twitter:description" content="Explore full-stack web applications, open-source projects, and technical experience of Aditya Jha." />
+    <meta
+      property="twitter:title"
+      content="Aditya Jha | Full Stack Developer & Software Engineer"
+    />
+    <meta
+      property="twitter:description"
+      content="Explore full-stack web applications, open-source projects, and technical experience of Aditya Jha."
+    />
 
     <!-- Structured Data -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Aditya Jha",
-      "jobTitle": "Full Stack Developer",
-      "sameAs": [
-        "https://github.com/adityajha-coder"
-      ],
-      "knowsAbout": ["Full Stack Web Development", "React", "Next.js", "Node.js", "Express", "MongoDB", "Golang", "TypeScript", "AI Integrations"]
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Aditya Jha",
+        "jobTitle": "Full Stack Developer",
+        "sameAs": ["https://github.com/adityajha-coder"],
+        "knowsAbout": [
+          "Full Stack Web Development",
+          "React",
+          "Next.js",
+          "Node.js",
+          "Express",
+          "MongoDB",
+          "Golang",
+          "TypeScript",
+          "AI Integrations"
+        ]
+      }
     </script>
 
     <link rel="icon" type="image/png" href="/Pics/favicon-portfolio.png" />
@@ -97,7 +126,44 @@
         > -->
       </div>
 
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-3 sm:gap-4">
+        <!-- Real CMD Logo Button (Icon Only) -->
+        <button
+          id="cmd-toggle-btn"
+          class="flex items-center justify-center p-1.5 sm:p-2 rounded-xl border border-white/15 bg-black/50 hover:bg-white/10 hover:border-white/30 transition-all duration-200 active:scale-95 group cursor-pointer shadow-sm"
+          title="Open Command Prompt (cmd.exe)"
+          aria-label="Open Interactive Command Prompt"
+        >
+          <!-- Real Windows CMD / Terminal Logo -->
+          <svg class="w-7 h-[22px] sm:w-[31px] sm:h-[25px] rounded-[4px] shrink-0 transition-transform group-hover:scale-105" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <clipPath id="cmd-logo-btn-clip">
+                <rect width="40" height="32" rx="5" />
+              </clipPath>
+            </defs>
+            <g clip-path="url(#cmd-logo-btn-clip)">
+              <!-- Console Dark Screen -->
+              <rect width="40" height="32" fill="#24262b" />
+
+              <!-- Segmented Top Tabs Header -->
+              <rect x="0" y="0" width="13.33" height="8.5" fill="#c4c7ce" />
+              <rect x="13.33" y="0" width="13.34" height="8.5" fill="#787d88" />
+              <rect x="26.67" y="0" width="13.33" height="8.5" fill="#4a4e58" />
+
+              <!-- Console Body -->
+              <rect x="0" y="8.5" width="40" height="23.5" fill="#24262b" />
+
+              <!-- Chevron > -->
+              <path d="M10.5 14L16.5 19.5L10.5 25" stroke="#e6e8ec" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+
+              <!-- Cursor Pill _ -->
+              <rect x="20" y="23.4" width="9.5" height="3.2" rx="1.6" fill="#e6e8ec" />
+            </g>
+            <!-- Frame Highlight -->
+            <rect x="0.5" y="0.5" width="39" height="31" rx="4.5" stroke="rgba(255, 255, 255, 0.2)" stroke-width="1" />
+          </svg>
+        </button>
+
         <a
           href="#contact"
           class="hidden md:block px-5 py-2 bg-white text-black text-sm font-semibold rounded-full hover:bg-pink-500 hover:text-white transition-all duration-300"
@@ -125,10 +191,16 @@
         class="flex flex-col min-h-full bg-gradient-to-br from-indigo-950/20 to-black p-6 sm:p-8"
       >
         <div class="flex justify-between items-center mb-10">
-          <div class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-wider font-harry-potter">
+          <div
+            class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-wider font-harry-potter"
+          >
             <span>Aditya Jha</span><span class="text-pink-500">.</span>
           </div>
-          <button id="menu-close" class="text-white p-2.5 glass-panel rounded-lg active:scale-95 cursor-pointer" aria-label="Close Menu">
+          <button
+            id="menu-close"
+            class="text-white p-2.5 glass-panel rounded-lg active:scale-95 cursor-pointer"
+            aria-label="Close Menu"
+          >
             <i data-lucide="x"></i>
           </button>
         </div>
@@ -167,10 +239,37 @@
           <a href="#contact" class="mobile-link text-pink-400 mt-2"
             >Contact Me</a
           >
+          <button
+            id="mobile-cmd-btn"
+            class="mobile-link text-left text-white hover:text-pink-400 flex items-center gap-3 font-mono text-base mt-2 py-1.5 px-3 rounded-lg bg-white/5 border border-white/10 hover:border-white/30 transition-colors"
+          >
+            <svg class="w-6 h-[18px] rounded-[3px] shrink-0" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <clipPath id="cmd-logo-mob-clip">
+                  <rect width="40" height="32" rx="5" />
+                </clipPath>
+              </defs>
+              <g clip-path="url(#cmd-logo-mob-clip)">
+                <rect width="40" height="32" fill="#24262b" />
+                <rect x="0" y="0" width="13.33" height="8.5" fill="#c4c7ce" />
+                <rect x="13.33" y="0" width="13.34" height="8.5" fill="#787d88" />
+                <rect x="26.67" y="0" width="13.33" height="8.5" fill="#4a4e58" />
+                <rect x="0" y="8.5" width="40" height="23.5" fill="#24262b" />
+                <path d="M10.5 14L16.5 19.5L10.5 25" stroke="#e6e8ec" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+                <rect x="20" y="23.4" width="9.5" height="3.2" rx="1.6" fill="#e6e8ec" />
+              </g>
+              <rect x="0.5" y="0.5" width="39" height="31" rx="4.5" stroke="rgba(255, 255, 255, 0.2)" stroke-width="1" />
+            </svg>
+            <span>cmd.exe</span>
+          </button>
         </div>
 
         <div class="mt-auto pt-10 pb-8">
-          <p class="text-gray-400 text-xs sm:text-sm uppercase tracking-wider mb-4">Let's Connect</p>
+          <p
+            class="text-gray-400 text-xs sm:text-sm uppercase tracking-wider mb-4"
+          >
+            Let's Connect
+          </p>
           <div class="flex gap-5" id="mobile-social-links">
             <!-- Injected by JS -->
           </div>
@@ -183,7 +282,9 @@
         id="home"
         class="min-h-screen flex flex-col-reverse md:flex-row justify-center md:justify-between items-center px-4 sm:px-8 md:px-24 pt-28 pb-16 md:py-20 gap-8 md:gap-10"
       >
-        <div class="max-w-3xl relative z-10 w-full md:w-3/5 text-center md:text-left">
+        <div
+          class="max-w-3xl relative z-10 w-full md:w-3/5 text-center md:text-left"
+        >
           <p
             id="hero-role"
             class="text-pink-400 font-medium mb-3 sm:mb-4 tracking-widest uppercase text-xs sm:text-sm"
@@ -210,7 +311,9 @@
             I specialize in full-stack web development and leveraging AI tools
             to build efficient, modern applications.
           </p>
-          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start w-full sm:w-auto">
+          <div
+            class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start w-full sm:w-auto"
+          >
             <a
               href="#work"
               class="px-8 py-3.5 sm:py-4 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-all transform hover:scale-105 text-center"
@@ -279,7 +382,9 @@
         class="min-h-screen py-16 sm:py-24 px-4 sm:px-8 md:px-24 flex flex-col justify-center"
       >
         <div class="mb-10 sm:mb-12">
-          <h2 class="text-3xl sm:text-5xl md:text-6xl font-bold mb-4">Work Showcase</h2>
+          <h2 class="text-3xl sm:text-5xl md:text-6xl font-bold mb-4">
+            Work Showcase
+          </h2>
           <div
             class="w-20 h-1 bg-gradient-to-r from-indigo-500 to-pink-500"
           ></div>
@@ -291,12 +396,11 @@
         ></div>
       </section>
 
-      <section
-        id="experience"
-        class="py-16 sm:py-24 px-4 sm:px-8 md:px-24"
-      >
+      <section id="experience" class="py-16 sm:py-24 px-4 sm:px-8 md:px-24">
         <div class="mb-12 sm:mb-16">
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Experience</h2>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+            Experience
+          </h2>
           <div
             class="w-20 h-1 bg-gradient-to-r from-pink-500 to-indigo-500"
           ></div>
@@ -355,9 +459,13 @@
 
           <div class="w-full max-w-lg">
             <div class="space-y-6">
-              <div class="glass-panel p-4 sm:p-6 rounded-2xl border border-white/10 flex items-center justify-between gap-3 sm:gap-4 flex-wrap hover:bg-white/10 transition-colors">
+              <div
+                class="glass-panel p-4 sm:p-6 rounded-2xl border border-white/10 flex items-center justify-between gap-3 sm:gap-4 flex-wrap hover:bg-white/10 transition-colors"
+              >
                 <div class="min-w-0 flex-1">
-                  <h4 class="text-white text-xs uppercase tracking-wider mb-1 opacity-70">
+                  <h4
+                    class="text-white text-xs uppercase tracking-wider mb-1 opacity-70"
+                  >
                     Email
                   </h4>
                   <span
@@ -371,16 +479,27 @@
                   class="px-3.5 sm:px-4 py-2 sm:py-2.5 bg-white/5 hover:bg-white/10 text-white rounded-xl border border-white/10 transition-all text-xs font-semibold flex items-center gap-2 shrink-0 active:scale-95 cursor-pointer"
                   title="Copy email address"
                 >
-                  <i data-lucide="copy" id="copy-icon" class="w-4 h-4 text-pink-400"></i>
+                  <i
+                    data-lucide="copy"
+                    id="copy-icon"
+                    class="w-4 h-4 text-pink-400"
+                  ></i>
                   <span id="copy-text">Copy</span>
                 </button>
               </div>
 
-              <div class="glass-panel p-4 sm:p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
-                <h4 class="text-white text-xs sm:text-sm uppercase tracking-wider mb-3">
+              <div
+                class="glass-panel p-4 sm:p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors"
+              >
+                <h4
+                  class="text-white text-xs sm:text-sm uppercase tracking-wider mb-3"
+                >
                   Socials
                 </h4>
-                <div class="flex gap-4 sm:gap-6 text-white flex-wrap" id="social-links">
+                <div
+                  class="flex gap-4 sm:gap-6 text-white flex-wrap"
+                  id="social-links"
+                >
                   <!-- Socials injected here -->
                 </div>
               </div>
@@ -392,9 +511,97 @@
       <footer
         class="py-8 px-4 sm:px-8 md:px-24 flex justify-center items-center text-white text-xs sm:text-sm text-center"
       >
-        <p id="footer-text" class="text-white font-medium">&copy; 2026 Aditya Jha. All rights reserved.</p>
+        <p id="footer-text" class="text-white font-medium">
+          &copy; 2026 Aditya Jha. All rights reserved.
+        </p>
       </footer>
     </main>
+
+    <!-- CMD Terminal Modal -->
+    <div
+      id="cmd-modal"
+      class="fixed inset-0 z-[100] flex items-center justify-center p-2 sm:p-4 md:p-6 bg-black/70 backdrop-blur-sm transition-opacity duration-200 opacity-0 pointer-events-none"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="cmd-title-text"
+    >
+      <div
+        id="cmd-window"
+        class="cmd-window w-full max-w-4xl h-[560px] max-h-[88vh] flex flex-col rounded-lg overflow-hidden transition-all duration-200 transform scale-95"
+      >
+        <!-- Windows CMD Title Bar -->
+        <div id="cmd-title-bar" class="cmd-title-bar">
+          <div class="cmd-title-left">
+            <div class="cmd-icon-box" title="Command Prompt">
+              <svg class="w-3.5 h-3" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <clipPath id="cmd-logo-clip-win">
+                    <rect width="40" height="32" rx="5" />
+                  </clipPath>
+                </defs>
+                <g clip-path="url(#cmd-logo-clip-win)">
+                  <rect width="40" height="32" fill="#24262b" />
+                  <rect x="0" y="0" width="13.33" height="8.5" fill="#c4c7ce" />
+                  <rect x="13.33" y="0" width="13.34" height="8.5" fill="#787d88" />
+                  <rect x="26.67" y="0" width="13.33" height="8.5" fill="#4a4e58" />
+                  <rect x="0" y="8.5" width="40" height="23.5" fill="#24262b" />
+                  <path d="M10.5 14L16.5 19.5L10.5 25" stroke="#e6e8ec" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+                  <rect x="20" y="23.4" width="9.5" height="3.2" rx="1.6" fill="#e6e8ec" />
+                </g>
+              </svg>
+            </div>
+            <span id="cmd-title-text" class="cmd-title-text"
+              >Command Prompt - Aditya Jha</span
+            >
+          </div>
+          <div class="cmd-window-controls">
+            <button
+              id="cmd-minimize-btn"
+              class="cmd-ctrl-btn"
+              title="Minimize"
+              aria-label="Minimize"
+            >
+              <span>&#x2014;</span>
+            </button>
+            <button
+              id="cmd-maximize-btn"
+              class="cmd-ctrl-btn"
+              title="Maximize"
+              aria-label="Maximize"
+            >
+              <span id="cmd-maximize-icon">&#x25A2;</span>
+            </button>
+            <button
+              id="cmd-close-btn"
+              class="cmd-ctrl-btn cmd-close-btn"
+              title="Close"
+              aria-label="Close"
+            >
+              <span>&#x2715;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Terminal Body -->
+        <div id="cmd-body" class="cmd-body">
+          <div id="cmd-output" class="cmd-output"></div>
+          <div class="cmd-prompt-row">
+            <span class="cmd-prompt-path">C:\Users\Aditya&gt;</span>
+            <div class="cmd-input-container">
+              <input
+                type="text"
+                id="cmd-input"
+                class="cmd-input"
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="off"
+                spellcheck="false"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script type="module" src="js/main.js"></script>
     <script type="module" src="js/three-bg.js"></script>

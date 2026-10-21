@@ -10,6 +10,7 @@ import { renderContact } from './components/contact.js';
 import { renderFooter } from './components/footer.js';
 import { renderEducation } from './components/education.js';
 import { renderCertifications } from './components/certifications.js';
+import { initCmd } from './components/cmd.js';
 
 function init() {
     renderNav(portfolioData);
@@ -23,6 +24,7 @@ function init() {
     renderEducation(portfolioData.education);
     renderCertifications(portfolioData.certifications);
     renderFooter(portfolioData);
+    initCmd(portfolioData);
     
     if (window.lucide) {
         window.lucide.createIcons();
