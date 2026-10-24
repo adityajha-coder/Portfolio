@@ -2,7 +2,7 @@ export const portfolioData = {
     name: "Aditya Jha",
     role: "Full Stack // Backend // AI",
     heroHeadline: ["Building", "Full Stack", "Solutions."],
-    shortBio: "Hi, I'm Aditya Jha, a Full Stack MERN Developer who loves thinking of new ideas and turning them into reality through code.",
+    shortBio: "Hi, I'm Aditya Jha, a Full Stack Developer who loves thinking of new ideas and turning them into reality through code.",
     email: "developer.adityajha@gmail.com",
 
     aboutSections: {
@@ -109,7 +109,7 @@ export const portfolioData = {
             category: "Auth & Security",
             description: "A secure authentication backend boilerplate built across multiple tier security releases. Made using Node.js, Express, MongoDB, Argon2id, RFC 6238 TOTP 2FA, RFC 6819 Token Theft Detection, AES-256-GCM Cryptography, Zod, Helmet, Express-Rate-Limit, Passport (Google & GitHub OAuth), JWT, and Nodemailer (Google OAuth2).",
             tech: ["Node.js", "Express", "MongoDB", "Argon2id", "Nodemailer"],
-            link: "https://github.com/adityajha-coder/AuthORS",
+            link: "https://adityajha-coder.github.io/AuthORS",
             github: "https://github.com/adityajha-coder/AuthORS",
             image: "/projects/authors.png"
         },

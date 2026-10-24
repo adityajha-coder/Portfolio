@@ -8,6 +8,7 @@ function createProjectCardHtml(project, index) {
             <div class="project-card-inner">
                 <div class="project-image-wrap">
                     <div class="project-number">0${index + 1}</div>
+                    <div class="project-image-blur" style="background-image: url('${project.image}')"></div>
                     <div class="project-image-bg" style="background-image: url('${project.image}')"></div>
                     <div class="project-image-overlay">
                         <span class="project-category-badge">${project.category}</span>
@@ -15,7 +16,7 @@ function createProjectCardHtml(project, index) {
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">${project.title}</h3>
-                    <p class="project-description text-xs text-gray-300 mb-4 line-clamp-3 leading-relaxed">${project.description}</p>
+                    <p class="project-description text-xs text-gray-300 mb-3 line-clamp-2 leading-relaxed">${project.description}</p>
                     <div class="project-tech-row">${techPills}</div>
                     <div class="project-footer flex items-center justify-between mt-auto">
                         <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="project-link hover:text-pink-400 transition-colors">
@@ -99,8 +100,13 @@ function openAllProjectsModal(projects) {
                 </button>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl w-full mx-auto mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl w-full mx-auto mb-10">
                 ${allCardsHtml}
+            </div>
+            <div class="text-center pb-8">
+                <p class="text-xs sm:text-sm text-gray-400 font-medium">
+                    For more of my work you can checkout <a href="https://github.com/adityajha-coder" target="_blank" rel="noopener noreferrer" class="text-pink-400 hover:text-pink-300 font-semibold underline underline-offset-4 inline-flex items-center gap-1 transition-colors">GitHub <svg class="w-3.5 h-3.5 inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></a>
+                </p>
             </div>
         </div>
     `;
